@@ -1,7 +1,7 @@
 <template>
     <div>
         <Header />
-        <slot name="main"></slot>
+        <slot></slot>
         <Footer />
     </div>
 </template>
@@ -16,14 +16,6 @@ export default {
     components: {
         Header,
         Footer,
-    },
-    computed: {
-        logoUrl () {
-            return '/logo/black/' + this.$page.props.locale + '/logo.png'
-        }
-    },
-    created() {
-        this.setSeoData(this.$page.props.seo)
     },
     mounted() {
         AOS.init({

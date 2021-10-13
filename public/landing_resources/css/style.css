@@ -113,7 +113,7 @@ img {
   width: 40%;
   left: 0;
   top: 0;
-  background: url(img/icons/header/pat.png) no-repeat;
+  background: url(/landing_resources/img/icons/header/pat.png) no-repeat;
   background-size: cover;
   background-position: right;
 }
@@ -265,7 +265,7 @@ img {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url(img/hero/bg.png) no-repeat;
+  background: url(/landing_resources/img/hero/bg.png) no-repeat;
   background-position: center;
   background-size: cover;
   position: relative;
@@ -395,7 +395,7 @@ img {
 /* products */
 .showcase.product {
   height: 200px;
-  background: url(img/products/bg.png) no-repeat;
+  background: url(/landing_resources/img/products/bg.png) no-repeat;
   background-position: center;
   background-size: cover;
   margin-top: 130px;
@@ -618,7 +618,7 @@ img {
 .showcase.news {
   height: 388px;
   width: 100%;
-  background: url(img/news/bg.png) no-repeat;
+  background: url(/landing_resources/img/news/bg.png) no-repeat;
   background-position: center;
   background-size: cover;
   margin-bottom: 30px;

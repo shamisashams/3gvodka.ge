@@ -1,225 +1,64 @@
 <template>
-    <landing class="cotact">
-        <template v-slot:main>
-            <section class="main_showcases margin_bottom service">
-                <div class="showcase_overlay">
-                    <div class="wrapper flex center">
-                        <div class="main_titles">
-                            <div class="title_bg bold">{{__('client.services')}}</div>
-                            <div class="title bold white">{{__('client.services')}}</div>
-                        </div>
-                        <div class="paragraph dc">
-                            {{__('client.projects_showcase_para')}}
+    <landing>
+        <div class="wrapper">
+            <section class="contact_page">
+                <div class="title60">Contact Us</div>
+                <div class="grid">
+                    <div>
+                        <div class="title">Contact</div>
+                        <p><img src="/landing_resources/img/icons/contact/1.svg" alt="" />0 32 2 444 777</p>
+                        <p><img src="/landing_resources/img/icons/contact/2.svg" alt="" />example@mail.com</p>
+                        <p>
+                            <img src="/landing_resources/img/icons/contact/3.svg" alt="" />30 Commercial Road
+                            Tbilisi, Georgia
+                        </p>
+                    </div>
+                    <div>
+                        <div class="title">Working hours</div>
+                        <p>
+                            <img src="/landing_resources/img/icons/contact/4.svg" alt="" /> Mon-Sat. 09:00 -
+                            19:00
+                            <br />
+                            Sunday: Closed
+                        </p>
+                    </div>
+                    <div>
+                        <div class="title">Write To Us</div>
+                        <form action="">
+                            <input type="text " placeholder="Name" />
+                            <input type="text " placeholder="e-mail" />
+                            <textarea placeholder="Text Here"></textarea>
+                            <button class="title">
+                                <img src="/landing_resources/img/icons/contact/5.svg" alt="" />Send Message
+                            </button>
+                        </form>
+                    </div>
+                    <div>
+                        <div class="title">Find Us On A Map</div>
+                        <div class="map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11910.594738916752!2d44.767606787777794!3d41.72809916984403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sge!4v1633599411390!5m2!1sen!2sge"
+                                width="600"
+                                height="450"
+                                style="border: 0"
+                                allowfullscreen=""
+                                loading="lazy"
+                            ></iframe>
                         </div>
                     </div>
                 </div>
             </section>
+        </div>
 
-            <section class="services_page wrapper">
-                <section class=" wrapper margin_bottom">
-                    <div class="title">
-                        <div class="main_blue bold">Lorem Ipsum Is Simply Dummy Text</div>
-                        <div class="paragraph dc">
-                            {{__('client.projects_showcase_para')}}
-                        </div>
-                    </div>
-                    <div class="service_boxes">
-                        <div class="service_box border">
-                            <img class='serbox_bg' src="/img/projects/2/1.png" alt="">
-                            <div class="text1 transition5">{{__('client.serbox_1_text1')}}</div>
-                            <div class="text2 bold main_blue transition5">
-                                {{__('client.serbox_1_text2')}}
-                            </div>
-                            <a href="#">
-                                <button class="plus flex center transition5">
-                                    <svg
-                                        class="transition5"
-                                        id="Layer_2"
-                                        data-name="Layer 2"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <g id="plus">
-                                            <rect
-                                                id="Rectangle_51"
-                                                data-name="Rectangle 51"
-                                                width="24"
-                                                height="24"
-                                                transform="translate(24 24) rotate(180)"
-                                                opacity="0"
-                                            />
-                                            <path
-                                                id="Path_72"
-                                                data-name="Path 72"
-                                                d="M19,11H13V5a1,1,0,0,0-2,0v6H5a1,1,0,0,0,0,2h6v6a1,1,0,0,0,2,0V13h6a1,1,0,0,0,0-2Z"
-                                            />
-                                        </g>
-                                    </svg>
-                                </button>
-                            </a>
-                            <span></span>
-                        </div>
-                        <div class="service_box border">
-                            <img class='serbox_bg' src="/img/projects/2/2.png" alt="">
-                            <div class="text1 transition5">{{__('client.serbox_2_text1')}}</div>
-                            <div class="text2 bold main_blue transition5">
-                                {{__('client.serbox_2_text2')}}
-                            </div>
-                            <a href="#">
-                                <button class="plus flex center transition5">
-                                    <svg
-                                        class="transition5"
-                                        id="Layer_2"
-                                        data-name="Layer 2"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <g id="plus">
-                                            <rect
-                                                id="Rectangle_51"
-                                                data-name="Rectangle 51"
-                                                width="24"
-                                                height="24"
-                                                transform="translate(24 24) rotate(180)"
-                                                opacity="0"
-                                            />
-                                            <path
-                                                id="Path_72"
-                                                data-name="Path 72"
-                                                d="M19,11H13V5a1,1,0,0,0-2,0v6H5a1,1,0,0,0,0,2h6v6a1,1,0,0,0,2,0V13h6a1,1,0,0,0,0-2Z"
-                                            />
-                                        </g>
-                                    </svg>
-                                </button>
-                            </a>
-                            <span></span>
-                        </div>
-                        <div class="service_box border">
-                            <img class='serbox_bg' src="/img/projects/1/3.png" alt="">
-                            <div class="text1 transition5">{{__('client.serbox_3_text1')}}</div>
-                            <div class="text2 bold main_blue transition5">
-                                {{__('client.serbox_3_text2')}}
-                            </div>
-                            <a href="#">
-                                <button class="plus flex center transition5">
-                                    <svg
-                                        class="transition5"
-                                        id="Layer_2"
-                                        data-name="Layer 2"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <g id="plus">
-                                            <rect
-                                                id="Rectangle_51"
-                                                data-name="Rectangle 51"
-                                                width="24"
-                                                height="24"
-                                                transform="translate(24 24) rotate(180)"
-                                                opacity="0"
-                                            />
-                                            <path
-                                                id="Path_72"
-                                                data-name="Path 72"
-                                                d="M19,11H13V5a1,1,0,0,0-2,0v6H5a1,1,0,0,0,0,2h6v6a1,1,0,0,0,2,0V13h6a1,1,0,0,0,0-2Z"
-                                            />
-                                        </g>
-                                    </svg>
-                                </button>
-                            </a>
-                            <span></span>
-                        </div>
-                        <div class="service_box border">
-                            <img class='serbox_bg' src="/img/projects/3/1.png" alt="">
-                            <div class="text1 transition5">{{__('client.serbox_4_text1')}}</div>
-                            <div class="text2 bold main_blue transition5">
-                                {{__('client.serbox_4_text2')}}
-                            </div>
-                            <a href="#">
-                                <button class="plus flex center transition5">
-                                    <svg
-                                        class="transition5"
-                                        id="Layer_2"
-                                        data-name="Layer 2"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <g id="plus">
-                                            <rect
-                                                id="Rectangle_51"
-                                                data-name="Rectangle 51"
-                                                width="24"
-                                                height="24"
-                                                transform="translate(24 24) rotate(180)"
-                                                opacity="0"
-                                            />
-                                            <path
-                                                id="Path_72"
-                                                data-name="Path 72"
-                                                d="M19,11H13V5a1,1,0,0,0-2,0v6H5a1,1,0,0,0,0,2h6v6a1,1,0,0,0,2,0V13h6a1,1,0,0,0,0-2Z"
-                                            />
-                                        </g>
-                                    </svg>
-                                </button>
-                            </a>
-                            <span></span>
-                        </div>
-                    </div>
-                </section>
-            </section>
-        </template>
     </landing>
 </template>
 <script>
-import Landing from "@/Layouts/Landing";
+import Landing from "@/Layouts/Landing"
 
 export default {
     components: {
         Landing,
-    },
-    data() {
-        return {
-            form: this.$inertia.form({
-                first_name: '',
-                last_name: '',
-                phone: '',
-                email: '',
-                message: ''
-            })
-        }
-    },
-    computed: {
-        contact() {
-            return this.$page.props.layoutData ? this.$page.props.layoutData.contact : {}
-        },
-        social() {
-            return this.$page.props.layoutData ? this.$page.props.layoutData.social : {}
-        },
-    },
-    methods: {
-        submit() {
-            this.form.post(this.route('contact.send'), {
-                onSuccess: () => this.form.reset()
-            })
-        },
-        getValueByFields(fields, key) {
-            if (!fields[key]) {
-                return ''
-            }
-            return fields[key].value
-        }
-    },
-    mounted() {
-        console.log(12345)
-    }
 
+    },
 }
 </script>

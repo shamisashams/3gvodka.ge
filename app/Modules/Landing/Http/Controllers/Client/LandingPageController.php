@@ -25,6 +25,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\Mail;
+use Inertia\Inertia;
 use Inertia\Response;
 use Laravel\Jetstream\Jetstream;
 use SeoData;
@@ -60,35 +61,8 @@ class LandingPageController extends Controller
      */
     public function home(Request $request): Response
     {
-        $page = Page::where('name', 'home')->first();
-        $pageData = $page ? (new PageMetaInfoResource($page->meta))->toArray($request) : [];
 
-        $blogs = (new BlogData())->getBlogs();
-
-        $projects = (new ProjectData())->getProjects();
-
-        $services = (new ServiceData())->getServices();
-
-        $teams = (new TeamData())->getTeams();
-
-        $allSeoData = SeoData::setTitle(__('seo.home.title'))
-            ->setDescription(__('seo.home.description'))
-            ->setKeywords(__('seo.home.description'))
-            ->setOgTitle(__('seo.home.title'))
-            ->setOgDescription(__('seo.home.description'))
-            ->getSeoData();
-
-        View::composer('app', function ($view) use ($allSeoData) {
-            $view->with('allSeoData', $allSeoData);
-        });
-
-        return Jetstream::inertia()->render($request, 'Landing/Home/Index', [
-            'page' => $pageData,
-            'blogs' => $blogs,
-            'projects' => $projects,
-            'teams' => $teams,
-            'services' => $services
-        ]);
+        return Jetstream::inertia()->render($request, 'Landing/Home/Index');
     }
 
     /**
@@ -98,24 +72,39 @@ class LandingPageController extends Controller
      */
     public function about(Request $request): Response
     {
-        $page = Page::where('name', 'about')->first();
-        $pageData = $page ? (new PageMetaInfoResource($page->meta))->toArray($request) : [];
 
-        $allSeoData = SeoData::setTitle(__('seo.about.title'))
-            ->setDescription(__('seo.about.description'))
-            ->setKeywords(__('seo.about.description'))
-            ->setOgTitle(__('seo.about.title'))
-            ->setOgDescription(__('seo.about.description'))
-            ->getSeoData();
+        return Jetstream::inertia()->render($request, 'Landing/About/Index');
+    }
 
-        View::composer('app', function ($view) use ($allSeoData) {
-            $view->with('allSeoData', $allSeoData);
-        });
-
-        return Jetstream::inertia()->render($request, 'Landing/About/Index', [
-            'page' => $pageData,
-            'seo' => $allSeoData
-        ]);
+    /**
+     * @param Request $request
+     *
+     * @return \Inertia\Response
+     */
+ /**
+     * @param Request $request
+     *
+     * @return \Inertia\Response
+     */
+    public function contact(Request $request): Response
+    {
+        return Jetstream::inertia()->render($request, 'Landing/Contact/Index');
+    }
+    public function news(Request $request): Response
+    {
+        return Jetstream::inertia()->render($request, 'Landing/News/Index');
+    }
+    public function products(Request $request): Response
+    {
+        return Jetstream::inertia()->render($request, 'Landing/Products/Index');
+    }
+    public function show_products(Request $request): Response
+    {
+        return Jetstream::inertia()->render($request, 'Landing/Products/Show');
+    }
+    public function show_news(Request $request): Response
+    {
+        return Jetstream::inertia()->render($request, 'Landing/News/Show');
     }
 
     /**

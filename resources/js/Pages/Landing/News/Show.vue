@@ -1,56 +1,52 @@
 <template>
-    <landing>
-        <template v-slot:main>
-            <breadcrumb :item="page[0]['fields']" />
+    <Landing >
 
-            <section class="blogs_page wrapper margin_bottom">
-                <lazy-image
-                    :src="item.profile_image"
-                    :show-placeholder="true"
-                    :alt="title"
-                />
-                <div class="cap">
-                    <div class="date">{{item.created_at}}</div>
-                    <div class="title bold main_blue">{{item.title}}</div>
-                    <div class="para" v-html="item.description"></div>
-                </div>
-            </section>
-            <gallery-section :gallery="gallery" />
-        </template>
-    </landing>
+        <div class="showcase news flex"><span>News Name</span></div>
+        <div class="wrapper show_news">
+            <p>
+                Now Is The Winter Of Our Discontent Made Glorious Summer By This Sun Of
+                York; And All The Clouds That Lour'd Upon Our House In The Deep Bosom Of
+                The Ocean Buried. Now Are Our Brows Bound With Victorious Wreaths; Our
+                Bruised Arms Hung Up For Monuments; Our Stern Alarums Changed To Merry
+                Meetings, Our Dreadful Marches To Delightful Measures.
+            </p>
+            <p>
+                Grim-Visaged War Hath Smooth'd His Wrinkled Front; And Now, Instead Of
+                Mounting Barded Steeds To Fright The Souls Of Fearful Adversaries, He
+                Capers Nimbly In A Lady's Chamber To The Lascivious Pleasing Of A Lute.
+                Now Is The Winter Of Our Discontent Made Glorious Summer By This Sun Of
+                York; And All The Clouds That Lour'd Upon Our House
+            </p>
+            <img src="/landing_resources/img/news/bg.png" alt="" />
+            <p>
+                Now Is The Winter Of Our Discontent Made Glorious Summer By This Sun Of
+                York; And All The Clouds That Lour'd Upon Our House In The Deep Bosom Of
+                The Ocean Buried. Now Are Our Brows Bound With Victorious Wreaths; Our
+                Bruised Arms Hung Up For Monuments; Our Stern Alarums Changed To Merry
+                Meetings, Our Dreadful Marches To Delightful Measures.
+            </p>
+            <p>
+                Grim-Visaged War Hath Smooth'd His Wrinkled Front; And Now, Instead Of
+                Mounting Barded Steeds To Fright The Souls Of Fearful Adversaries, He
+                Capers Nimbly In A Lady's Chamber To The Lascivious Pleasing Of A Lute.
+                Now Is The Winter Of Our Discontent Made Glorious Summer By This Sun Of
+                York; And All The Clouds That Lour'd Upon Our House
+            </p>
+            <button class="back">
+                <img src="/landing_resources/img/icons/pag/back.svg" alt="" />Back to News
+            </button>
+        </div>
+
+
+    </Landing>
 </template>
 <script>
-import Landing from "@/Layouts/Landing"
-import Breadcrumb from "@/Components/BreadcrumbItem"
-import GallerySection from "@/Components/Sections/Gallery"
-import LazyImage from "@/Components/Web/Image/Image"
+import Landing from "@/Layouts/Landing";
 
 export default {
     components: {
         Landing,
-        Breadcrumb,
-        GallerySection,
-        LazyImage
-    },
-    props: {
-        item: {
-            type: Object
-        },
-        page: {
-            type: Array
-        }
-    },
-    computed: {
-        gallery () {
-            return this.item?.gallery?.galleries?.fields?.map(item => {
-                item[0].value = item?.[0]?.file?.full_src
-                return item
-            })
-        }
-    },
 
-    mounted () {
-        console.log(this.gallery)
     }
 }
 </script>

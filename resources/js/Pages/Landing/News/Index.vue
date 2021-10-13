@@ -1,51 +1,101 @@
 <template>
-    <landing>
-        <template v-slot:main>
-            <breadcrumb :item="page[0]['fields']" />
-            <section class="blogs_page wrapper">
-                <div
-                    v-for="item in items.data"
-                    :key="item.id"
-                    class="blog_item"
-                >
-                    <news-item
-                        :item="item"
-                        class="margin-bottom-sm-50"
-                    />
+    <Landing >
+
+        <div class="news_page wrapper">
+            <div class="title60">News</div>
+            <div class="grid">
+                <div class="news_item">
+                    <div class="img">
+                        <img src="/landing_resources/img/news/1.png" alt="" />
+                    </div>
+                    <p class="bold">Header Of The Article</p>
+                    <p>
+                        Lorem Ipsum Madolor Sit Amet, Consectetur Adipisicing Elit, Sed Do
+                        Eiusmod Tempor Coli Incidit Labore Lorem Ipsum Amet Madolor Sit
+                    </p>
+                    <p class="bold">11.08.2021</p>
+                    <a href="show-news.html">Learn More</a>
                 </div>
-                <pagination
-                    :current-page="items.current_page"
-                    :per-page="items.per_page"
-                    :total="items.total"
-                    :links="items.links"
-                />
-            </section>
-        </template>
-    </landing>
+                <div class="news_item">
+                    <div class="img">
+                        <img src="/landing_resources/img/news/2.png" alt="" />
+                    </div>
+                    <p class="bold">Header Of The Article</p>
+                    <p>
+                        Lorem Ipsum Madolor Sit Amet, Consectetur Adipisicing Elit, Sed Do
+                        Eiusmod Tempor Coli Incidit Labore Lorem Ipsum Amet Madolor Sit
+                    </p>
+                    <p class="bold">11.08.2021</p>
+                    <a href="show-news.html">Learn More</a>
+                </div>
+                <div class="news_item">
+                    <div class="img">
+                        <img src="/landing_resources/img/news/3.png" alt="" />
+                    </div>
+                    <p class="bold">Header Of The Article</p>
+                    <p>
+                        Lorem Ipsum Madolor Sit Amet, Consectetur Adipisicing Elit, Sed Do
+                        Eiusmod Tempor Coli Incidit Labore Lorem Ipsum Amet Madolor Sit
+                    </p>
+                    <p class="bold">11.08.2021</p>
+                    <a href="show-news.html">Learn More</a>
+                </div>
+                <div class="news_item">
+                    <div class="img">
+                        <img src="/landing_resources/img/news/1.png" alt="" />
+                    </div>
+                    <p class="bold">Header Of The Article</p>
+                    <p>
+                        Lorem Ipsum Madolor Sit Amet, Consectetur Adipisicing Elit, Sed Do
+                        Eiusmod Tempor Coli Incidit Labore Lorem Ipsum Amet Madolor Sit
+                    </p>
+                    <p class="bold">11.08.2021</p>
+                    <a href="show-news.html">Learn More</a>
+                </div>
+                <div class="news_item">
+                    <div class="img">
+                        <img src="/landing_resources/img/news/2.png" alt="" />
+                    </div>
+                    <p class="bold">Header Of The Article</p>
+                    <p>
+                        Lorem Ipsum Madolor Sit Amet, Consectetur Adipisicing Elit, Sed Do
+                        Eiusmod Tempor Coli Incidit Labore Lorem Ipsum Amet Madolor Sit
+                    </p>
+                    <p class="bold">11.08.2021</p>
+                    <a href="show-news.html">Learn More</a>
+                </div>
+                <div class="news_item">
+                    <div class="img">
+                        <img src="/landing_resources/img/news/3.png" alt="" />
+                    </div>
+                    <p class="bold">Header Of The Article</p>
+                    <p>
+                        Lorem Ipsum Madolor Sit Amet, Consectetur Adipisicing Elit, Sed Do
+                        Eiusmod Tempor Coli Incidit Labore Lorem Ipsum Amet Madolor Sit
+                    </p>
+                    <p class="bold">11.08.2021</p>
+                    <a href="show-news.html">Learn More</a>
+                </div>
+            </div>
+            <div class="pagination flex center">
+                <button class="arr"><img src="/landing_resources/img/icons/pag/prev.svg" alt="" /></button>
+                <button class="num active">1</button>
+                <button class="num">2</button>
+                <button class="num">3</button>
+                <button class="arr"><img src="/landing_resources/img/icons/pag/next.svg" alt="" /></button>
+            </div>
+        </div>
+
+
+    </Landing>
 </template>
 <script>
-import Landing from "@/Layouts/Landing"
-import NewsItem from "@/Components/News/NewsItem"
-import Breadcrumb from "@/Components/BreadcrumbItem"
-import Pagination from "@/Components/Pagination/Pagination";
+import Landing from "@/Layouts/Landing";
 
 export default {
     components: {
         Landing,
-        NewsItem,
-        Breadcrumb,
-        Pagination
-    },
-    props: {
-        items: {
-            type: Array
-        },
-        route: {
-            type: String
-        },
-        page: {
-            type: Array
-        }
+
     }
 }
 </script>

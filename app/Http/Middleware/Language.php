@@ -16,6 +16,7 @@ class Language
      */
     public function handle($request, Closure $next)
     {
+
         // Check if the first segment matches a language code
         if (!in_array($request->segment(1), config('language_manager.locales')) ) {
             // Store segments in array
