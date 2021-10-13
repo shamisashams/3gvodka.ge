@@ -25,6 +25,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use Inertia\Response;
 use Laravel\Jetstream\Jetstream;
@@ -62,7 +63,24 @@ class LandingPageController extends Controller
     public function home(Request $request): Response
     {
 
-        return Jetstream::inertia()->render($request, 'Landing/Home/Index');
+        $page = Page::where('name', 'home')->first();
+        $pageData = $page ? (new PageMetaInfoResource($page->meta))->toArray($request) : [];
+
+        $allSeoData = SeoData::setTitle(__('seo.home.title'))
+            ->setDescription(__('seo.home.description'))
+            ->setKeywords(__('seo.home.description'))
+            ->setOgTitle(__('seo.home.title'))
+            ->setOgDescription(__('seo.home.description'))
+            ->getSeoData();
+
+        View::composer('app', function ($view) use ($allSeoData) {
+            $view->with('allSeoData', $allSeoData);
+        });
+
+        return Jetstream::inertia()->render($request, 'Landing/Home/Index', [
+            'page' => $pageData,
+            'active_route' => Route::currentRouteName()
+        ]);
     }
 
     /**

@@ -1,21 +1,31 @@
 <template v-show="item">
-    <section class="hero_section_container">
-        <section class="hero_section hero_slider margin_bottom">
-        <hero-item
-            v-for="(slide, index) in heroData"
-            :key="index"
-            :slide="slide"
-        />
-        </section>
-        <div class="arrows flex">
-            <button id="prev_heroslide" class="flex center">
-                <img src="/landing_resources/img/icons/slider/prev.png" alt="" />
-            </button>
-            <button id="next_heroslide" class="flex center">
-                <img src="/landing_resources/img/icons/slider/next.png" alt="" />
-            </button>
-        </div>
+    <section id="hero">
+        <div class="wrapper flex">
+            <div class="content">
+                <div class="title" v-html="item.fields.title?.value">
 
+                </div>
+                <div v-html="item.fields.description?.value">
+
+                </div>
+            </div>
+            <div class="slider" v-if="heroData.length">
+                <div id="hero_slider">
+                    <hero-item
+                        v-for="(slide, index) in heroData"
+                        :key="index"
+                        :slide="slide"
+                    />
+                </div>
+                <button id="prev_slide">
+                    <img src="/landing_resources/img/icons/slider/prev.png" alt="" />
+                </button>
+                <button id="next_slide">
+                    <img src="/landing_resources/img/icons/slider/next.png" alt="" />
+                </button>
+                <img class="bolb" src="/landing_resources/img/hero/bolb.png" alt="" />
+            </div>
+        </div>
     </section>
 </template>
 

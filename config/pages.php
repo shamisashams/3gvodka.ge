@@ -10,6 +10,20 @@ return [
                 'status' => 1,
                 'inputs' => [
                     [
+                        'label' => 'title',
+                        'name' => 'title',
+                        'type' => 'wysiwig',
+                        'is_translation' => true,
+                        'is_required' => false,
+                    ],
+                    [
+                        'label' => 'description',
+                        'name' => 'description',
+                        'type' => 'wysiwig',
+                        'is_translation' => true,
+                        'is_required' => false,
+                    ],
+                    [
                         'images' => [],
                         'label' => 'multi_fields',
                         'name' => 'fields',
@@ -17,38 +31,6 @@ return [
                         'is_translation' => false,
                         'is_required' => false,
                         'additional_fields' => [
-                            [
-                                'label' => 'background_title',
-                                'name' => 'background_title',
-                                'type' => 'text',
-                                'is_translation' => true,
-                                'is_required' => false,
-                                'locale' => []
-                            ],
-                            [
-                                'label' => 'title',
-                                'name' => 'title',
-                                'type' => 'text',
-                                'is_translation' => true,
-                                'is_required' => false,
-                                'locale' => []
-                            ],
-                            [
-                                'label' => 'description',
-                                'name' => 'description',
-                                'type' => 'wysiwig',
-                                'is_translation' => true,
-                                'is_required' => false,
-                                'locale' => []
-                            ],
-                            [
-                                'label' => 'content',
-                                'name' => 'content',
-                                'type' => 'wysiwig',
-                                'is_translation' => true,
-                                'is_required' => false,
-                                'locale' => []
-                            ],
                             [
                                 'label' => 'image',
                                 'name' => 'image',
@@ -59,116 +41,6 @@ return [
                             ],
                         ]
                     ]
-                ]
-            ],
-            'services' => [
-                'activeLocaleKey' => 'en',
-                'key' => 'services',
-                'label' => '',
-                'status' => 1,
-                'inputs' => [
-                    [
-                        'label' => 'background_title',
-                        'name' => 'background_title',
-                        'type' => 'text',
-                        'is_translation' => true,
-                        'is_required' => false,
-                    ],
-                    [
-                        'label' => 'title',
-                        'name' => 'title',
-                        'type' => 'wysiwig',
-                        'is_translation' => true,
-                        'is_required' => false,
-                    ],
-                ]
-            ],
-            'about' => [
-                'activeLocaleKey' => 'en',
-                'key' => 'about',
-                'label' => '',
-                'status' => 1,
-                'inputs' => [
-                    [
-                        'label' => 'title',
-                        'name' => 'title',
-                        'type' => 'text',
-                        'is_translation' => true,
-                        'is_required' => false,
-                        'locale' => []
-                    ],
-                    [
-                        'label' => 'description',
-                        'name' => 'description',
-                        'type' => 'wysiwig',
-                        'is_translation' => true,
-                        'is_required' => false,
-                        'locale' => []
-                    ],
-                    [
-                        'label' => 'banner_image',
-                        'name' => 'banner_image',
-                        'type' => 'image',
-                        'is_translation' => false,
-                        'is_required' => false,
-                        'image' => []
-                    ],
-                ]
-            ],
-            'statistic' => [
-                'activeLocaleKey' => 'en',
-                'key' => 'statistic',
-                'label' => '',
-                'status' => 1,
-                'inputs' => [
-                    [
-                        'images' => [],
-                        'label' => 'multi_fields',
-                        'name' => 'fields',
-                        'type' => 'multi_fields',
-                        'is_translation' => false,
-                        'is_required' => false,
-                        'additional_fields' => [
-                            [
-                                'label' => 'background_title',
-                                'name' => 'background_title',
-                                'type' => 'text',
-                                'is_translation' => true,
-                                'is_required' => false,
-                            ],
-                            [
-                                'label' => 'title',
-                                'name' => 'title',
-                                'type' => 'wysiwig',
-                                'is_translation' => true,
-                                'is_required' => false,
-                            ],
-                        ]
-                    ]
-                ]
-            ],
-            'projects' => [
-                'activeLocaleKey' => 'en',
-                'key' => 'projects',
-                'label' => '',
-                'status' => 1,
-                'inputs' => [
-                    [
-                        'label' => 'background_title',
-                        'name' => 'background_title',
-                        'type' => 'text',
-                        'is_translation' => true,
-                        'is_required' => false,
-                        'locale' => []
-                    ],
-                    [
-                        'label' => 'title',
-                        'name' => 'title',
-                        'type' => 'wysiwig',
-                        'is_translation' => true,
-                        'is_required' => false,
-                        'locale' => []
-                    ],
                 ]
             ],
             'galleries' => [
@@ -178,20 +50,18 @@ return [
                 'status' => 1,
                 'inputs' => [
                     [
-                        'label' => 'background_title',
-                        'name' => 'background_title',
-                        'type' => 'text',
-                        'is_translation' => true,
-                        'is_required' => false,
-                        'locale' => []
-                    ],
-                    [
                         'label' => 'title',
                         'name' => 'title',
                         'type' => 'wysiwig',
                         'is_translation' => true,
                         'is_required' => false,
-                        'locale' => []
+                    ],
+                    [
+                        'label' => 'description',
+                        'name' => 'description',
+                        'type' => 'wysiwig',
+                        'is_translation' => true,
+                        'is_required' => false,
                     ],
                     [
                         'images' => [],
@@ -201,6 +71,20 @@ return [
                         'is_translation' => false,
                         'is_required' => false,
                         'additional_fields' => [
+                            [
+                                'label' => 'title',
+                                'name' => 'title',
+                                'type' => 'text',
+                                'is_translation' => true,
+                                'is_required' => false,
+                            ],
+                            [
+                                'label' => 'link_url',
+                                'name' => 'link_url',
+                                'type' => 'text',
+                                'is_translation' => false,
+                                'is_required' => false,
+                            ],
                             [
                                 'label' => 'image',
                                 'name' => 'image',
@@ -212,55 +96,7 @@ return [
                         ]
                     ]
                 ]
-            ],
-            'blogs' => [
-                'activeLocaleKey' => 'en',
-                'key' => 'blogs',
-                'label' => '',
-                'status' => 1,
-                'inputs' => [
-                    [
-                        'label' => 'background_title',
-                        'name' => 'background_title',
-                        'type' => 'text',
-                        'is_translation' => true,
-                        'is_required' => false,
-                        'locale' => []
-                    ],
-                    [
-                        'label' => 'title',
-                        'name' => 'title',
-                        'type' => 'wysiwig',
-                        'is_translation' => true,
-                        'is_required' => false,
-                        'locale' => []
-                    ],
-                ]
-            ],
-            'teams' => [
-                'activeLocaleKey' => 'en',
-                'key' => 'teams',
-                'label' => '',
-                'status' => 1,
-                'inputs' => [
-                    [
-                        'label' => 'background_title',
-                        'name' => 'background_title',
-                        'type' => 'text',
-                        'is_translation' => true,
-                        'is_required' => false,
-                        'locale' => []
-                    ],
-                    [
-                        'label' => 'title',
-                        'name' => 'title',
-                        'type' => 'wysiwig',
-                        'is_translation' => true,
-                        'is_required' => false,
-                        'locale' => []
-                    ],
-                ]
-            ],
+            ]
         ],
         'project' => [
             'hero' => [

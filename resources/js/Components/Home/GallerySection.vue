@@ -1,12 +1,11 @@
 <template v-show="item">
-    <section class="gallery_section wrapper margin_bottom">
-        <div class="section_head flex">
-            <div class="main_titles">
-                <div class="title_bg bold">{{ item.fields.background_title?.value }}</div>
-                <div class="title bold main_blue" v-html="item.fields.title?.value"></div>
-            </div>
+    <section class="brands wrapper">
+        <div class="title60" v-html="item.fields.title?.value">
+
         </div>
-        <div class="gallery_grid">
+        <p v-html="item.fields.description?.value">
+        </p>
+        <div class="brand_grid">
             <template
                 v-for="(item, key) in item.fields.fields.value"
                 :key="key"

@@ -1,11 +1,12 @@
 <template>
-    <div class="g_item img_overlay">
+    <a :href="link_url" class="brand_item">
         <lazy-image
             :src="image"
             :show-placeholder="true"
             :alt="title"
         />
-    </div>
+        <div>{{title}}</div>
+    </a>
 </template>
 
 <script>
@@ -25,9 +26,11 @@ export default {
         image () {
             return this.getValueByFields('image')
         },
-
         title () {
-            return `No Image`
+            return this.getValueByFields('title')
+        },
+        link_url () {
+            return this.getValueByFields('link_url')
         }
     },
 

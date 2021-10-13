@@ -40,6 +40,7 @@ class JetstreamServiceProvider extends ServiceProvider
 
         $layoutData = null;
         $allSeoData = null;
+        $services = null;
         if(Schema::hasTable('pages_meta')){
             $analyticSeoData = Page::whereName(Page::NAME_SEO)->first();
             $analytics = PageSeoService::getAnalyticData($analyticSeoData ? $analyticSeoData->first()->meta : []);
@@ -56,6 +57,7 @@ class JetstreamServiceProvider extends ServiceProvider
             });
 
             $pages = Page::whereIn('name', [ Page::NAME_CONTACT,Page::NAME_SOCIAL])->get();
+            $services= (new ServiceData())->getServicesStatic(5);
 
             $layoutData = [];
             foreach($pages as $page) {
@@ -63,7 +65,6 @@ class JetstreamServiceProvider extends ServiceProvider
                 $layoutData[$page->name] =!empty($pageData[0]) ? $pageData[0] : [];
             }
         }
-        $services = (new ServiceData())->getServicesStatic(5);
         Inertia::share([
             'layoutData'   => $layoutData,
             'seo'   => $allSeoData,
