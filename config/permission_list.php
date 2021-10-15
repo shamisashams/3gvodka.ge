@@ -43,4 +43,7 @@ return [
     'team'     => [
         'default'   => $default_permissions
     ],
+    'brand'     => [
+        'default'   => $default_permissions
+    ],
 ];

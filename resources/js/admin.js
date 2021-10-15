@@ -26,6 +26,7 @@ var components = {
     'page-meta-form': require('./base/admin_pages/page_meta/CreateFormPage').default,
     // Page Modules
     'blog-create-form': require('@/base/admin_pages/blog/CreateForm').default,
+    'brand-create-form': require('@/base/admin_pages/brand/CreateForm').default,
     'project-create-form': require('@/base/admin_pages/project/CreateForm').default,
     'service-create-form': require('@/base/admin_pages/service/CreateForm').default,
     'team-create-form': require('@/base/admin_pages/team/CreateForm').default,
