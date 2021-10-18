@@ -10,6 +10,11 @@
             <span class="sidebar-nav-mini-hide">@lang('admin.brands.menu')</span></a>
     </li>
     <li
+        {!! strpos(request()->route()->getName(), 'admin.product.') !== false ? ' class="active"' : '' !!}>
+        <a href="{{route('admin.product.index')}}"><i class="el-icon-link sidebar-nav-icon"></i>
+            <span class="sidebar-nav-mini-hide">@lang('admin.product.menu')</span></a>
+    </li>
+    <li
         {!! strpos(request()->route()->getName(), 'admin.blog.') !== false ? ' class="active"' : '' !!}>
         <a href="{{route('admin.blog.index')}}"><i class="el-icon-link sidebar-nav-icon"></i>
             <span class="sidebar-nav-mini-hide">@lang('admin.blogs.menu')</span></a>

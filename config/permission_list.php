@@ -46,4 +46,7 @@ return [
     'brand'     => [
         'default'   => $default_permissions
     ],
+    'product'     => [
+        'default'   => $default_permissions
+    ],
 ];

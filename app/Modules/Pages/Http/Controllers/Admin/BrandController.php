@@ -6,6 +6,7 @@ use App\Modules\Admin\Http\Controllers\BaseController;
 use App\Modules\Pages\Helpers\BlogHelper;
 use App\Modules\Pages\Helpers\BrandHelper;
 use App\Modules\Pages\Http\Requests\Admin\Blog\BlogStoreRequest;
+use App\Modules\Pages\Http\Requests\Admin\Brand\BrandStoreRequest;
 use App\Modules\Pages\Models\Blog;
 use App\Modules\Pages\Models\Brand;
 use App\Modules\Pages\Models\Translations\BlogTranslation;
@@ -124,7 +125,7 @@ class BrandController extends BaseController
      * @param BlogStoreRequest $request
      * @return JsonResponse
      */
-    public function store(Request $request): JsonResponse
+    public function store(BrandStoreRequest $request): JsonResponse
     {
         try {
             (new BrandStoreData())
