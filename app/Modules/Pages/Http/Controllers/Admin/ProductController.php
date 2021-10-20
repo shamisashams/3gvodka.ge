@@ -133,7 +133,7 @@ class ProductController extends BaseController
      * @param BlogStoreRequest $request
      * @return JsonResponse
      */
-    public function store(Request $request)
+    public function store(ProductStoreRequest $request)
     {
 //        dd($request);
         try {

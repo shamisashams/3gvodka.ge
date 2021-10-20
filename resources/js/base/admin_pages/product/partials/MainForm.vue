@@ -85,7 +85,7 @@
 <!--                                        </div>-->
 <!--                                    </div>-->
                                     <div class="form-group dashed" v-if="brandsJson.length>0">
-                                        <label class="col-md-1 control-label">{{ lang.brand }}:</label>
+<!--                                        <label class="col-md-1 control-label">{{ lang.brand }}:</label>-->
                                         <select v-model="form.brand_id">
                                             <option v-for="brand in brandsJson" :value=brand.id >
                                                 {{brand.title}}

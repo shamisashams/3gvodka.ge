@@ -4,17 +4,22 @@ namespace App\Modules\Landing\Http\Controllers\Client;
 
 use App\Modules\Landing\Http\Requests\ContactSendRequest;
 use App\Modules\Landing\Http\Resources\Blog\BlogItemResource;
+use App\Modules\Landing\Http\Resources\Brand\BrandItemResource;
+use App\Modules\Landing\Http\Resources\Product\ProductItemResource;
 use App\Modules\Landing\Http\Resources\Project\ProjectItemResource;
 use App\Modules\Landing\Http\Resources\Service\ServiceItemResource;
 use App\Modules\Landing\Http\Resources\Team\TeamItemResource;
 use App\Modules\Landing\Mail\ContactSend;
 use App\Modules\Pages\Http\Resources\Client\PageMetaInfoResource;
 use App\Modules\Pages\Models\Blog;
+use App\Modules\Pages\Models\Brand;
 use App\Modules\Pages\Models\Page;
+use App\Modules\Pages\Models\Product;
 use App\Modules\Pages\Models\Project;
 use App\Modules\Pages\Models\Service;
 use App\Modules\Pages\Models\Team;
 use App\Modules\Pages\Services\Client\BlogData;
+use App\Modules\Pages\Services\Client\BrandData;
 use App\Modules\Pages\Services\Client\ProjectData;
 use App\Modules\Pages\Services\Client\ServiceData;
 use App\Modules\Pages\Services\Client\TeamData;
@@ -60,11 +65,20 @@ class LandingPageController extends Controller
      *
      * @return Response
      */
-    public function home(Request $request): Response
+    public function home(Request $request)
+    {
+        return "mainpage";
+    }
+    public function product(Request $request):Response
     {
 
         $page = Page::where('name', 'home')->first();
+//        dd($page);
         $pageData = $page ? (new PageMetaInfoResource($page->meta))->toArray($request) : [];
+
+        $brands = (new BrandData())->getBrands();
+//        dd($brands);
+
 
         $allSeoData = SeoData::setTitle(__('seo.home.title'))
             ->setDescription(__('seo.home.description'))
@@ -79,9 +93,65 @@ class LandingPageController extends Controller
 
         return Jetstream::inertia()->render($request, 'Landing/Home/Index', [
             'page' => $pageData,
-            'active_route' => Route::currentRouteName()
+            'active_route' => Route::currentRouteName(),
+            'brands' => $brands
         ]);
     }
+
+    public function brandView(Request $request, $slug) {
+        $brand = Brand::with([
+            'translations',
+            'images',
+        ])->with(['products' => function($query){
+            $query->with("images")->where('status', 1);
+        }])
+            ->active()
+            ->where('id', getIdFromSlug($slug))->firstOrFail();
+//        dd((new BrandItemResource($brand))->toArrayForShow());
+        $allSeoData = (new BrandItemResource($brand))->toSeoData();
+        View::composer('app', function ($view) use ($allSeoData) {
+            $view->with('allSeoData', $allSeoData);
+        });
+
+        $page = Page::where('name', 'brand')->first();
+        $pageData = $page ? (new PageMetaInfoResource($page->meta))->toArray($request) : [];
+
+//        dd((new BrandItemResource($brand))->toArrayForShow(),);
+
+        return Jetstream::inertia()->render($request, 'Landing/Brand/Index', [
+            'brand' => (new BrandItemResource($brand))->toArrayForShow(),
+//            'brand' => $brand,
+            'seo' => $allSeoData,
+            'page' => $pageData
+        ]);
+    }
+
+
+    public function productView(Request $request, $slug)
+    {
+        $product = Product::with([
+            'translations',
+            'images'
+        ])
+            ->active()
+            ->where('id', getIdFromSlug($slug))->firstOrFail();
+
+        $allSeoData = (new ProductItemResource($product))->toSeoData();
+        View::composer('app', function ($view) use ($allSeoData) {
+            $view->with('allSeoData', $allSeoData);
+        });
+
+        $page = Page::where('name', 'product')->first();
+        $pageData = $page ? (new PageMetaInfoResource($page->meta))->toArray($request) : [];
+
+//        dd((new ProductItemResource($product))->toArrayForShow());
+        return Jetstream::inertia()->render($request, 'Landing/Product/Show', [
+            'product' => array((new ProductItemResource($product))->toArrayForShow()),
+            'seo' => $allSeoData,
+            'page' => $pageData
+        ]);
+    }
+
 
     /**
      * @param Request $request

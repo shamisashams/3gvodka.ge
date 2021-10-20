@@ -9,22 +9,22 @@
 
                 </div>
             </div>
-            <div class="slider" v-if="heroData.length">
-                <div id="hero_slider">
-                    <hero-item
-                        v-for="(slide, index) in heroData"
-                        :key="index"
-                        :slide="slide"
-                    />
-                </div>
-                <button id="prev_slide">
-                    <img src="/landing_resources/img/icons/slider/prev.png" alt="" />
-                </button>
-                <button id="next_slide">
-                    <img src="/landing_resources/img/icons/slider/next.png" alt="" />
-                </button>
-                <img class="bolb" src="/landing_resources/img/hero/bolb.png" alt="" />
-            </div>
+<!--            <div class="slider" v-if="heroData.length">-->
+<!--                <div id="hero_slider">-->
+<!--                    <hero-item-->
+<!--                        v-for="(slide, index) in heroData"-->
+<!--                        :key="index"-->
+<!--                        :slide="slide"-->
+<!--                    />-->
+<!--                </div>-->
+<!--                <button id="prev_slide">-->
+<!--                    <img src="/landing_resources/img/icons/slider/prev.png" alt="" />-->
+<!--                </button>-->
+<!--                <button id="next_slide">-->
+<!--                    <img src="/landing_resources/img/icons/slider/next.png" alt="" />-->
+<!--                </button>-->
+<!--                <img class="bolb" src="/landing_resources/img/hero/bolb.png" alt="" />-->
+<!--            </div>-->
         </div>
     </section>
 </template>

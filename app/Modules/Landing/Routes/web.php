@@ -32,8 +32,17 @@ Route::group(['middleware' => config('fortify.middleware', ['web'])], function (
     Route::get('show_news',[LandingPageController::class,'show_news'])->name('show_news.index');
     Route::get('show_products',[LandingPageController::class,'show_products'])->name('show_products.index');
 
+    Route::prefix('brand')->group(function () {
+        Route::get('',[LandingPageController::class, 'brand'])->name('brand.index');
+        Route::get('{slug}',[LandingPageController::class, 'brandView'])->name('brand.show');
+    });
+    Route::prefix('product')->group(function () {
+        Route::get('',[LandingPageController::class, 'product'])->name('product.index');
+        Route::get('{slug}',[LandingPageController::class, 'productView'])->name('product.show');
+    });
+
     Route::prefix('blog')->group(function () {
-        Route::get('',[LandingPageController::class, 'blog'])->name('blog.index');
+//        Route::get('',[LandingPageController::class, 'blog'])->name('blog.index');
         Route::get('{slug}',[LandingPageController::class, 'blogView'])->name('blog.show');
     });
 

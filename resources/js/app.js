@@ -9,7 +9,7 @@ import { VueClipboard } from '@soerenmartius/vue3-clipboard';
 import { Vue3Mq } from 'vue3-mq';
 // import VCalendar from 'v-calendar';
 import { SetupCalendar} from 'v-calendar';
-
+console.log(1);
 const el = document.getElementById('app');
 
 const app = createApp({

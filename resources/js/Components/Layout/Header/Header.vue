@@ -1,14 +1,15 @@
 <template>
+
     <header id="header">
         <div class="main" id="main_header">
             <div class="top">
                 <div class="wrapper flex">
                     <div>
-                        <a href="#" class="info">
+                        <a href="brands.html" class="info">
                             <img src="/landing_resources/img/icons/header/1.svg" alt="" />
                             0 32 2 444 777
                         </a>
-                        <a href="#" class="info">
+                        <a href="brands.html" class="info">
                             <img src="/landing_resources/img/icons/header/2.svg" alt="" />
                             info@example.com
                         </a>
@@ -38,7 +39,7 @@
                         <img src="/landing_resources/img/logo/1.png" alt="" />
                     </a>
                     <div class="navbar">
-                        <a href="home.html">home</a>
+                        <a href="main.html">home</a>
                         <a href="products.html">products & Partners</a>
                         <a href="news.html">news</a>
                         <a href="about.html">About us</a>
@@ -63,6 +64,7 @@
             </div>
         </div>
     </header>
+
 
 </template>
 
