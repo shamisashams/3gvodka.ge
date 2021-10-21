@@ -141,6 +141,19 @@
                             :item="this.form && this.form.meta ? this.form.meta : undefined">
                         </single-elements>
 
+                        <single-elements
+                            v-if="type === 'mail'"
+                            :editorConfig="editorConfig"
+                            :default-locale="default_locale"
+                            :locales="locales"
+                            :lang="lang"
+                            :options="options"
+                            :routes="routes"
+                            :updateData="updateData"
+                            :item="this.form && this.form.meta ? this.form.meta : undefined">
+                        </single-elements>
+
+
                     </el-tab-pane>
 
                 </el-tabs>
@@ -152,6 +165,7 @@
                            :disabled="loading"
                            style="margin: 15px 0 30px 0px">{{ lang.save_text }}
                 </el-button>
+
             </div>
         </div>
     </div>

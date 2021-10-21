@@ -37,9 +37,9 @@ class BlogItemResource
         return [
             'id'    => $this->item->id,
             'title' => $this->item->title,
-            'description' => $this->item->short_description,
+            'description' => $this->item->description,
             'profile_image' => $this->item->getImageByKey('profile'),
-            'show_url'  =>route('blog.show',generateSlug($this->item->id,$this->item->title)),
+            'show_url'  =>route('news.show',generateSlug($this->item->id,$this->item->title)),
             'created_at' => $this->getDateFormat(),
         ];
     }
@@ -67,7 +67,7 @@ class BlogItemResource
         if (!$this->item->date) {
             return '';
         }
-        return $this->item->date->format('Y') . ' '  . __('date.month.' . $this->item->date->format('M')) . ' ' . $this->item->date->format('d');
+        return $this->item->date->format('Y') . '.'  .  $this->item->date->format('m') . '.' . $this->item->date->format('d');
     }
 
     /**

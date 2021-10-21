@@ -54,9 +54,9 @@
 <section id="wrapper">
     <section id="mainContent">
         <section id="content">
-            <h2> {{__('სახელი')}}: {{$data['first_name']}}</h2>
-            <h2> {{__('გვარი')}}: {{$data['last_name']}}</h2>
-            <h2> {{__('ტელეფონი')}}: {{$data['phone']}}</h2>
+            <h2> {{__('სახელი')}}: {{$data['name']}}</h2>
+{{--            <h2> {{__('გვარი')}}: {{$data['last_name']}}</h2>--}}
+{{--            <h2> {{__('ტელეფონი')}}: {{$data['phone']}}</h2>--}}
             <h2> {{__('ელ-ფოსტა')}}: {{$data['email']}}</h2>
             <h2> {{__('შეტყობინება')}}</h2>
             <h5>{{$data['message']}}</h5>

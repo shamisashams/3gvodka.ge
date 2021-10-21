@@ -19,7 +19,7 @@ class BrandData
     /**
      * @var Blog
      */
-    protected Brand $blogs;
+    protected Brand $brands;
 
     /**
      * BlogData constructor.

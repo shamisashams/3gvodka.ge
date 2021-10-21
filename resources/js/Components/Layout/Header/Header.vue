@@ -5,28 +5,37 @@
             <div class="top">
                 <div class="wrapper flex">
                     <div>
-                        <a href="brands.html" class="info">
+                        <a v-if="contact" :href="'tel://' + getValueByFields(contact.fields,'phone')" class="info">
                             <img src="/landing_resources/img/icons/header/1.svg" alt="" />
-                            0 32 2 444 777
+                            {{ getValueByFields(contact.fields, 'phone') }}
                         </a>
-                        <a href="brands.html" class="info">
+                        <a v-if="contact" :href="'mailto:' + getValueByFields(contact.fields,'email')" class="info">
                             <img src="/landing_resources/img/icons/header/2.svg" alt="" />
-                            info@example.com
+                            {{ getValueByFields(contact.fields, 'email') }}
                         </a>
                     </div>
                     <div>
-                        <div class="info">
+                        <div class="info" v-if="contact">
                             <img src="/landing_resources/img/icons/header/3.svg" alt="" />
-                            Mon-Fri: 09:00 - 19:00
+                            {{ getValueByFields(contact.fields, 'working') }}
                         </div>
-                        <div class="sm">
-                            <a href="#">
+                        <div class="sm" v-if="social">
+                            <a v-if="getValueByFields(social.fields,'facebook')"
+                               :href="getValueByFields(social.fields,'facebook')"
+                               target="_blank"
+                            >
                                 <img src="/landing_resources/img/icons/header/4.svg" alt="" />
                             </a>
-                            <a href="#">
+                            <a v-if="getValueByFields(social.fields,'linkedin')"
+                               :href="getValueByFields(social.fields,'linkedin')"
+                               target="_blank"
+                            >
                                 <img src="/landing_resources/img/icons/header/5.svg" alt="" />
                             </a>
-                            <a href="#">
+                            <a v-if="getValueByFields(social.fields,'youtube')"
+                               :href="getValueByFields(social.fields,'youtube')"
+                               target="_blank"
+                            >
                                 <img src="/landing_resources/img/icons/header/6.svg" alt="" />
                             </a>
                         </div>
@@ -39,11 +48,11 @@
                         <img src="/landing_resources/img/logo/1.png" alt="" />
                     </a>
                     <div class="navbar">
-                        <a href="main.html">home</a>
-                        <a href="products.html">products & Partners</a>
-                        <a href="news.html">news</a>
-                        <a href="about.html">About us</a>
-                        <a href="contact.html">contact</a>
+                        <inertia-link href="/">home</inertia-link>
+                        <inertia-link href="/product">products & Partners</inertia-link>
+                        <inertia-link href="/news">news</inertia-link>
+                        <inertia-link href="/about">About us</inertia-link>
+                        <inertia-link href="/contact">contact</inertia-link>
                     </div>
                     <div class="languages">
                         ENG
@@ -78,5 +87,22 @@ import {Inertia} from "@inertiajs/inertia"
 export default {
     name: "Header",
 
+    computed: {
+        contact() {
+            return this.$page.props.layoutData ? this.$page.props.layoutData.contact : {}
+        },
+        social() {
+            return this.$page.props.layoutData ? this.$page.props.layoutData.social : {}
+        },
+    },
+
+    methods: {
+        getValueByFields(fields, key) {
+            if (!fields[key]) {
+                return ''
+            }
+            return fields[key].value
+        }
+    },
 }
 </script>

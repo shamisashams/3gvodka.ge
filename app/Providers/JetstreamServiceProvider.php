@@ -57,6 +57,8 @@ class JetstreamServiceProvider extends ServiceProvider
             });
 
             $pages = Page::whereIn('name', [ Page::NAME_CONTACT,Page::NAME_SOCIAL])->get();
+//            dd(Page::get());
+//            $pages= Page::get();
             $services= (new ServiceData())->getServicesStatic(5);
 
             $layoutData = [];
@@ -64,6 +66,8 @@ class JetstreamServiceProvider extends ServiceProvider
                 $pageData = (new PageMetaInfoResource($page->meta))->toArray();
                 $layoutData[$page->name] =!empty($pageData[0]) ? $pageData[0] : [];
             }
+//            $layoutData = count($layoutData) >0 ? $layoutData : null;
+//            dd($layoutData);
         }
         Inertia::share([
             'layoutData'   => $layoutData,

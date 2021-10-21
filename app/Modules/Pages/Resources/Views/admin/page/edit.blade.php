@@ -15,11 +15,12 @@
 
                 <div class="back-botton" style="text-align: right;margin-bottom: 15px;">
                 </div>
-
+{{--                @dd($data['routes']['create_form_data'])--}}
                 <page-meta-form
                     :editor_config="{{ json_encode($data['editor_config']) }}"
                     :type="'{{ $data['type'] }}'"
-                    :get-save-data-route="'{{ $data['routes']['create_form_data'] }}'">
+                    :get-save-data-route="'{{ $data['routes']['create_form_data'] }}'"
+                >
                 </page-meta-form>
 
             </div>

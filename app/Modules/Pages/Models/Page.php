@@ -35,6 +35,7 @@ class Page extends BaseModel
      * Pages name.
      */
     const NAME_HOME = 'home';
+    const NAME_MAILER = 'mail';
     const NAME_PROJECT = 'project';
     const NAME_BLOG = 'blog';
     const NAME_TEAM = 'team';

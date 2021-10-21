@@ -8,6 +8,8 @@
  */
 namespace App\Modules\Landing\Mail;
 
+use App\Modules\Pages\Http\Resources\Client\PageMetaInfoResource;
+use App\Modules\Pages\Models\Page;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
@@ -39,7 +41,10 @@ class ContactSend extends Mailable
      */
     public function build(): ContactSend
     {
-        return $this->from($this->data['to'], $this->data['name'])
+        $mailTo = Page::whereIn('name', [ Page::NAME_CONTACT])->firstOrFail();
+        $mailTo = (new PageMetaInfoResource($mailTo->meta))->toArray()[0];
+//        dd($mailTo["fields"]["email"]["value"]);
+        return $this->from($mailTo["fields"]["email"]["value"], $this->data['name'])
             ->subject($this->data['subject'])->view('email.contact', ['data' => $this->data]);
     }
 }

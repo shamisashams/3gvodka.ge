@@ -36,7 +36,9 @@ button {
 a {
     text-decoration: none;
 }
-
+.notvalid {
+    color: red;
+}
 html {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;

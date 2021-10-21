@@ -140,6 +140,30 @@ return [
                 ]
             ],
         ],
+        'mail' => [
+            'mail' => [
+                'activeLocaleKey' => 'ka',
+                'key' => 'mail',
+                'label' => '',
+                'status' => 1,
+                'inputs' => [
+                    [
+                        'label' => 'email',
+                        'name' => 'email',
+                        'type' => 'text',
+                        'is_translation' => false,
+                        'is_required' => false
+                    ],
+                    [
+                        'label' => 'subject',
+                        'name' => 'subject',
+                        'type' => 'text',
+                        'is_translation' => false,
+                        'is_required' => false
+                    ]
+                ]
+            ],
+        ],
         'blog' => [
             'hero' => [
                 'activeLocaleKey' => 'en',

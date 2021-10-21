@@ -1,52 +1,40 @@
 <template>
     <Landing >
 
-        <div class="showcase news flex"><span>News Name</span></div>
+    <template v-slot:main>
+        <div class="showcase news flex"><span>{{ neww.title }}</span></div>
         <div class="wrapper show_news">
-            <p>
-                Now Is The Winter Of Our Discontent Made Glorious Summer By This Sun Of
-                York; And All The Clouds That Lour'd Upon Our House In The Deep Bosom Of
-                The Ocean Buried. Now Are Our Brows Bound With Victorious Wreaths; Our
-                Bruised Arms Hung Up For Monuments; Our Stern Alarums Changed To Merry
-                Meetings, Our Dreadful Marches To Delightful Measures.
-            </p>
-            <p>
-                Grim-Visaged War Hath Smooth'd His Wrinkled Front; And Now, Instead Of
-                Mounting Barded Steeds To Fright The Souls Of Fearful Adversaries, He
-                Capers Nimbly In A Lady's Chamber To The Lascivious Pleasing Of A Lute.
-                Now Is The Winter Of Our Discontent Made Glorious Summer By This Sun Of
-                York; And All The Clouds That Lour'd Upon Our House
-            </p>
-            <img src="/landing_resources/img/news/bg.png" alt="" />
-            <p>
-                Now Is The Winter Of Our Discontent Made Glorious Summer By This Sun Of
-                York; And All The Clouds That Lour'd Upon Our House In The Deep Bosom Of
-                The Ocean Buried. Now Are Our Brows Bound With Victorious Wreaths; Our
-                Bruised Arms Hung Up For Monuments; Our Stern Alarums Changed To Merry
-                Meetings, Our Dreadful Marches To Delightful Measures.
-            </p>
-            <p>
-                Grim-Visaged War Hath Smooth'd His Wrinkled Front; And Now, Instead Of
-                Mounting Barded Steeds To Fright The Souls Of Fearful Adversaries, He
-                Capers Nimbly In A Lady's Chamber To The Lascivious Pleasing Of A Lute.
-                Now Is The Winter Of Our Discontent Made Glorious Summer By This Sun Of
-                York; And All The Clouds That Lour'd Upon Our House
-            </p>
-            <button class="back">
+            <img :src="neww.profile_image" alt="" />
+            <p v-html="neww.description"></p>
+            <button class="back" v-on:click="goBack">
                 <img src="/landing_resources/img/icons/pag/back.svg" alt="" />Back to News
             </button>
         </div>
 
+    </template>
 
     </Landing>
 </template>
 <script>
 import Landing from "@/Layouts/Landing";
-
 export default {
     components: {
         Landing,
-
+    },
+    props: {
+      news:{
+          type: Array
+      }
+    },
+    computed: {
+        neww: function (){
+            return this.news[0];
+        }
+    },
+    methods: {
+        goBack: function () {
+            window.location.href = '/news';
+        }
     }
 }
 </script>

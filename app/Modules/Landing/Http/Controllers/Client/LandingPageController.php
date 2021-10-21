@@ -178,10 +178,60 @@ class LandingPageController extends Controller
     {
         return Jetstream::inertia()->render($request, 'Landing/Contact/Index');
     }
+
     public function news(Request $request): Response
     {
-        return Jetstream::inertia()->render($request, 'Landing/News/Index');
+        $page = Page::where('name', 'news')->first();
+//        dd($page);
+        $pageData = $page ? (new PageMetaInfoResource($page->meta))->toArray($request) : [];
+
+        $news = (new BlogData())->getBlogs();
+//        dd($news);
+
+
+        $allSeoData = SeoData::setTitle(__('seo.home.title'))
+            ->setDescription(__('seo.home.description'))
+            ->setKeywords(__('seo.home.description'))
+            ->setOgTitle(__('seo.home.title'))
+            ->setOgDescription(__('seo.home.description'))
+            ->getSeoData();
+
+        View::composer('app', function ($view) use ($allSeoData) {
+            $view->with('allSeoData', $allSeoData);
+        });
+
+        return Jetstream::inertia()->render($request, 'Landing/News/Index', [
+            'page' => $pageData,
+            'active_route' => Route::currentRouteName(),
+            'news' => $news
+        ]);
     }
+
+    public function newsView(Request $request, $slug)
+    {
+        $news = Blog::with([
+            'translations',
+            'images'
+        ])
+            ->active()
+            ->where('id', getIdFromSlug($slug))->firstOrFail();
+
+        $allSeoData = (new BlogItemResource($news))->toSeoData();
+        View::composer('app', function ($view) use ($allSeoData) {
+            $view->with('allSeoData', $allSeoData);
+        });
+
+        $page = Page::where('name', 'blog')->first();
+        $pageData = $page ? (new PageMetaInfoResource($page->meta))->toArray($request) : [];
+
+//        dd((new ProductItemResource($product))->toArrayForShow());
+        return Jetstream::inertia()->render($request, 'Landing/News/Show', [
+            'news' => array((new BlogItemResource($news))->toArrayForShow()),
+            'seo' => $allSeoData,
+            'page' => $pageData
+        ]);
+    }
+
     public function products(Request $request): Response
     {
         return Jetstream::inertia()->render($request, 'Landing/Products/Index');
@@ -467,5 +517,31 @@ class LandingPageController extends Controller
             'seo' => $allSeoData,
             'page' => $pageData
         ]);
+    }
+
+    public function mail(Request $request)
+    {
+        if ($request->method() == 'POST') {
+            $request->validate([
+                'name' => 'required|string|max:55',
+                'email' => 'required|email',
+                'message' => 'required|max:1024'
+            ]);
+
+            $data = [
+                'name' => $request->name,
+                'email' => $request->email,
+                'subject' => 'subject',
+                'message' => $request->message
+            ];
+//            dd($data);
+//            $mailTo = Setting::where(['key' => 'email'])->first();
+            $mailTo = "vakhobatsikadze@gmail.com";
+//            if (($mailTo !== null) && $mailTo->value) {
+                Mail::to($mailTo)->send(new ContactSend($data));
+//            }
+//
+        }
+//        return redirect()->route("client.contact.index");
     }
 }
