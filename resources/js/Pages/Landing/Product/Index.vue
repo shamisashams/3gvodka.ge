@@ -3,25 +3,19 @@
         <template v-slot:main>
             <section id="hero">
                 <div class="wrapper flex">
-                    <div class="content">
-                        <div class="title">
-                            Welcome To <br />
-                            Georgian Global Group
+                    <div class="content" v-if="slider">
+                        <div class="title" v-html="slider.fields.title.value">
                         </div>
-                        <p>
-                            Now Is The Winter Of Our Discontent Made Glorious Summer By This Sun
-                            Of York; And All The Clouds That Lour'd Upon Our House In The Deep
-                            Bosom Of The Ocean Buried. Now Are Our Brows Bound With Victorious
-                            Wreaths; Our Bruised Arms Hung Up For Monuments; Our Stern Alarums
-                            Changed To Merry Meetings, Our Dreadful Marches To Delightful
-                            Measures.
+                        <p v-html="slider.fields.description.value">
                         </p>
+<!--                        <p>-->
+<!--                            {{slider.fields.fields.value[0][0].value}}-->
+<!--                        </p>-->
                     </div>
-                    <div class="slider">
-                        <div id="hero_slider">
-                            <img src="/landing_resources/img/hero/1.png" alt="" />
-                            <img src="/landing_resources/img/hero/2.png" alt="" />
-                            <img src="/landing_resources/img/hero/1.png" alt="" />
+                    <div class="slider" v-if="slider">
+                        <div id="hero_slider" >
+                            <img v-for="img in slider.fields.fields.value" :src="img[0].value" alt="" />
+
                         </div>
                         <button id="prev_slide">
                             <img src="/landing_resources/img/icons/slider/prev.png" alt="" />
@@ -34,10 +28,8 @@
                 </div>
             </section>
             <section class="brands wrapper">
-                <div class="title60">Our Brands & Product</div>
-                <p>
-                    Lorem Ipsum Madolor Sit Amet, Consectetur Adipisicing Elit, Sed Do
-                    Eiusmod Tempor Coli Incidit Labore Lorem Ipsum Amet Madolor Sit Amet.
+                <div class="title60" v-if="brand_text" v-html="brand_text.fields.title.value"></div>
+                <p v-if="brand_text" v-html="brand_text.fields.description.value">
                 </p>
                 <div class="brand_grid">
                     <inertia-link :href="brand.show_url" class="brand_item" v-for="brand in brands">
@@ -62,14 +54,16 @@
 import landing from "@/Layouts/Landing";
 import HeroSection from "../../../Components/Home/HeroSection";
 import GallerySection from "../../../Components/Home/GallerySection";
-import LazyImage from "@/Components/Web/Image/Image"
+import LazyImage from "@/Components/Web/Image/Image";
+import Pagination from "@/Components/Pagination/Pagination";
 
 export default {
     components: {
         landing,
         HeroSection,
         GallerySection,
-        LazyImage
+        LazyImage,
+        Pagination
     },
     props: {
         page: {
@@ -78,16 +72,34 @@ export default {
         brands: {
             type: Array
         },
+
     },
-    mounted() {
-        function pagee() {
-            console.log(this.page);
-        }
+    computed: {
+        slider() {
+            let i;
+            this.page.forEach(element => {
+                if (element.key==="slider"){
+                    i = element;
+                }
+            });
+           return i;
+
+        },
+        brand_text() {
+            let i;
+            this.page.forEach(element => {
+                if (element.key==="brands"){
+                    i = element;
+                }
+            });
+            return i;
+        },
     },
+
     methods: {
-        getValueByFields(fieldss, key) {
+        getValueByFields(fields, key) {
             let value = '';
-            fieldss.forEach((item) => {
+            fields.forEach((item) => {
                 if (!value && item.name === key) {
                     value = item.value
                 }

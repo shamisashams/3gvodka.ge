@@ -4,7 +4,7 @@
         <template v-slot:main>
 
             <div class="news_page wrapper">
-                <div class="title60">News</div>
+                <div class="title60" v-if="news_title" v-html="news_title.fields.title.value"></div>
                 <div class="grid">
                     <div class="news_item" v-for="neww in news">
                         <div class="img">
@@ -16,6 +16,7 @@
                         <inertia-link :href="neww.show_url">Learn More</inertia-link>
                     </div>
                 </div>
+
                 <div class="pagination flex center">
                     <button class="arr"><img src="/landing_resources/img/icons/pag/prev.svg" alt="" /></button>
                     <button class="num active">1</button>
@@ -31,17 +32,34 @@
 </template>
 <script>
 import Landing from "@/Layouts/Landing";
-import LazyImage from "@/Components/Web/Image/Image"
+import LazyImage from "@/Components/Web/Image/Image";
+
 
 export default {
     components: {
         Landing,
-        LazyImage
+        LazyImage,
     },
     props: {
         news: {
             type: Array
         },
+        page: {
+            type: Array
+        },
     },
+    computed: {
+        news_title() {
+            let i;
+            this.page.forEach(element => {
+                if (element.key==="blog"){
+                    i = element;
+                }
+            });
+            return i;
+
+        }
+    },
+
 }
 </script>

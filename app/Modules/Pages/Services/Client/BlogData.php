@@ -34,8 +34,7 @@ class BlogData
     public function getBlogs(): array
     {
         $blogs = $this->blogs::with(['translations', 'images'])
-            ->active()->orderBy('created_at', 'DESC')->take(5)->get();
-
+            ->active()->orderBy('created_at', 'DESC')->take(3)->get();
         $blogsData = [];
         foreach ($blogs->getIterator() as $blog) {
             $blogsData[] = (new BlogItemResource($blog))->toListItem();

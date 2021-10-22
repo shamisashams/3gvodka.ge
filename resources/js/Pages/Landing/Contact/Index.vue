@@ -18,7 +18,7 @@
                         </div>
                         <div>
                             <div class="title">Working hours</div>
-                            <p>
+                            <p v-if="contact">
                                 <img src="/landing_resources/img/icons/contact/4.svg" alt="" />
                                 {{ getValueByFields(contact.fields, 'working') }}
                             </p>

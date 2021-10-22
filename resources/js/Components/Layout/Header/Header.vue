@@ -48,17 +48,18 @@
                         <img src="/landing_resources/img/logo/1.png" alt="" />
                     </a>
                     <div class="navbar">
-                        <inertia-link href="/">home</inertia-link>
-                        <inertia-link href="/product">products & Partners</inertia-link>
-                        <inertia-link href="/news">news</inertia-link>
-                        <inertia-link href="/about">About us</inertia-link>
-                        <inertia-link href="/contact">contact</inertia-link>
+                        <inertia-link :href="locale_route(locales.current_locale,'/')">home</inertia-link>
+                        <inertia-link :href="locale_route(locales.current_locale,'/product')">products & Partners</inertia-link>
+                        <inertia-link :href="locale_route(locales.current_locale,'/news')">news</inertia-link>
+                        <inertia-link :href="locale_route(locales.current_locale,'/about')">About us</inertia-link>
+                        <inertia-link :href="locale_route(locales.current_locale,'/contact')">contact</inertia-link>
                     </div>
                     <div class="languages">
-                        ENG
+                        {{locales.current_locale}}
                         <div class="drop">
-                            <a href="#">RUS</a>
-                            <a href="#">GEO</a>
+                            <div v-for="(link,locale) in locales.available_locales">
+                                <inertia-link  :href="link" v-if="locale != locales.current_locale">{{ locale }}</inertia-link>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -86,7 +87,6 @@ import {Inertia} from "@inertiajs/inertia"
 
 export default {
     name: "Header",
-
     computed: {
         contact() {
             return this.$page.props.layoutData ? this.$page.props.layoutData.contact : {}
@@ -94,6 +94,16 @@ export default {
         social() {
             return this.$page.props.layoutData ? this.$page.props.layoutData.social : {}
         },
+        locales() {
+            let i={
+                'current_locale': this.$page.props.locale,
+                '.available_locales': this.$page.props.available_locales
+            }
+            return {
+                'current_locale': this.$page.props.locale,
+                'available_locales': this.$page.props.available_locales
+            };
+        }
     },
 
     methods: {

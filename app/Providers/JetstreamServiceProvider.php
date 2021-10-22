@@ -29,6 +29,20 @@ class JetstreamServiceProvider extends ServiceProvider
         //
     }
 
+    function get_url($lang): string
+    {
+
+        $host = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]";
+        $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+
+        $uriSegments[1] = $lang;
+
+
+        $uriSegments = implode('/', $uriSegments);
+        return $host . $uriSegments;
+    }
+
+
     /**
      * Bootstrap any application services.
      *
@@ -57,8 +71,6 @@ class JetstreamServiceProvider extends ServiceProvider
             });
 
             $pages = Page::whereIn('name', [ Page::NAME_CONTACT,Page::NAME_SOCIAL])->get();
-//            dd(Page::get());
-//            $pages= Page::get();
             $services= (new ServiceData())->getServicesStatic(5);
 
             $layoutData = [];
@@ -66,8 +78,14 @@ class JetstreamServiceProvider extends ServiceProvider
                 $pageData = (new PageMetaInfoResource($page->meta))->toArray();
                 $layoutData[$page->name] =!empty($pageData[0]) ? $pageData[0] : [];
             }
-//            $layoutData = count($layoutData) >0 ? $layoutData : null;
-//            dd($layoutData);
+
+
+//            urls for language change
+            $language_urls = [];
+            foreach (config('language_manager.locales') as $lang){
+//                $language_urls[$lang] = $this->get_url($lang);
+            }
+//            dd(app()->getLocale());
         }
         Inertia::share([
             'layoutData'   => $layoutData,
@@ -75,9 +93,7 @@ class JetstreamServiceProvider extends ServiceProvider
             'locale'            => function () {
                 return app()->getLocale();
             },
-            'available_locales' => function () {
-                return config('language_manager.locales');
-            },
+            'available_locales' => $language_urls,
             'lang'              => function () {
                 $file = base_path() . '/lang/'.app()->getLocale().'/client.php';
 

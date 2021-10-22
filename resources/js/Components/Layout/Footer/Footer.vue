@@ -39,11 +39,11 @@
 
             </div>
             <div class="col col_2">
-                <a href="home.html" class="title">Home</a>
-                <a href="#" class="title">Products & Partners</a>
-                <a href="#" class="title">News</a>
-                <a href="#" class="title">About Us</a>
-                <a href="#" class="title">Contact</a>
+                <inertia-link :href="locale_route(this.$page.props.locale,'/')" class="title">Home</inertia-link>
+                <inertia-link :href="locale_route(this.$page.props.locale,'/product')" class="title">Products & Partners</inertia-link>
+                <inertia-link :href="locale_route(this.$page.props.locale,'/news')" class="title">News</inertia-link>
+                <inertia-link :href="locale_route(this.$page.props.locale,'/about')" class="title">About Us</inertia-link>
+                <inertia-link :href="locale_route(this.$page.props.locale,'/contact')" class="title">Contact</inertia-link>
             </div>
             <form class="col col_3 form" @submit.prevent="submit">
                 <input type="text " placeholder="Name" v-model="form.name"/>

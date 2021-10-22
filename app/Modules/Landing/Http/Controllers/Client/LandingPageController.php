@@ -72,12 +72,11 @@ class LandingPageController extends Controller
     public function product(Request $request):Response
     {
 
-        $page = Page::where('name', 'home')->first();
-//        dd($page);
+        $page = Page::where('name', 'product')->first();
         $pageData = $page ? (new PageMetaInfoResource($page->meta))->toArray($request) : [];
 
+
         $brands = (new BrandData())->getBrands();
-//        dd($brands);
 
 
         $allSeoData = SeoData::setTitle(__('seo.home.title'))
@@ -91,7 +90,7 @@ class LandingPageController extends Controller
             $view->with('allSeoData', $allSeoData);
         });
 
-        return Jetstream::inertia()->render($request, 'Landing/Home/Index', [
+        return Jetstream::inertia()->render($request, 'Landing/Product/Index', [
             'page' => $pageData,
             'active_route' => Route::currentRouteName(),
             'brands' => $brands
@@ -129,6 +128,7 @@ class LandingPageController extends Controller
 
     public function productView(Request $request, $slug)
     {
+
         $product = Product::with([
             'translations',
             'images'
@@ -148,7 +148,8 @@ class LandingPageController extends Controller
         return Jetstream::inertia()->render($request, 'Landing/Product/Show', [
             'product' => array((new ProductItemResource($product))->toArrayForShow()),
             'seo' => $allSeoData,
-            'page' => $pageData
+            'page' => $pageData,
+            'goBack' => \route('product.index')
         ]);
     }
 
@@ -160,8 +161,12 @@ class LandingPageController extends Controller
      */
     public function about(Request $request): Response
     {
+        $page = Page::where('name', 'about')->first();
+        $pageData = $page ? (new PageMetaInfoResource($page->meta))->toArray($request) : [];
 
-        return Jetstream::inertia()->render($request, 'Landing/About/Index');
+        return Jetstream::inertia()->render($request, 'Landing/About/Index',[
+            'page' => $pageData
+        ]);
     }
 
     /**
@@ -181,7 +186,7 @@ class LandingPageController extends Controller
 
     public function news(Request $request): Response
     {
-        $page = Page::where('name', 'news')->first();
+        $page = Page::where('name', 'blog')->first();
 //        dd($page);
         $pageData = $page ? (new PageMetaInfoResource($page->meta))->toArray($request) : [];
 
@@ -228,7 +233,8 @@ class LandingPageController extends Controller
         return Jetstream::inertia()->render($request, 'Landing/News/Show', [
             'news' => array((new BlogItemResource($news))->toArrayForShow()),
             'seo' => $allSeoData,
-            'page' => $pageData
+            'page' => $pageData,
+            'goBack' => \route('news.index')
         ]);
     }
 

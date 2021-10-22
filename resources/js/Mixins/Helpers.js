@@ -148,7 +148,11 @@ export default {
             });
 
             document.querySelector('meta[property="og:url"]').setAttribute("content", window.location.href);
+        },
+        locale_route(locale, path) {
+            return path !== "/" ? "/" + locale + path : "/" + locale;
         }
+
     },
 
     created () {

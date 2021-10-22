@@ -55,7 +55,9 @@ export default {
 
     methods: {
         productUrl: function (product){
-            return '/product/'+product.id+'-'+product.title.split(" ").join("-");
+            if (product.title){
+                return '/product/'+product.id+'-'+product.title.split(" ").join("-");
+            }
         }
     }
 

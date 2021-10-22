@@ -24,7 +24,10 @@ export default {
     props: {
       news:{
           type: Array
-      }
+      },
+        goBack:{
+          type: String
+        }
     },
     computed: {
         neww: function (){
@@ -33,7 +36,7 @@ export default {
     },
     methods: {
         goBack: function () {
-            window.location.href = '/news';
+            window.location.href = this.goBack;
         }
     }
 }

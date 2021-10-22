@@ -2,36 +2,15 @@
     <Landing >
         <template v-slot:main>
             <section id="hero">
-                <div class="wrapper about_us">
-                    <div class="content">
-                        <div class="title">About Us</div>
-                        <p>
-                            Now Is The Winter Of Our Discontent Made Glorious Summer By This Sun
-                            Of York; And All The Clouds That Lour'd Upoh Victorious Wreaths; Our
-                            Bruised Arms Hung Up For Monuments; Our Stern Alarums Changed To
-                            Merry Meetings, Our Dreadful Marc Bound With Victorious Wreaths; Our
-                            Bruised Arms Hung Up Focontent Madhes To Delightful Measures.
-                        </p>
-                        <p>
-                            Now Is The Winter Of Our Discontent Made Glorious Summer By This Sun
-                            Of York; And All The Clouds That Lour'd Upon Our House In The Deep
-                            Bosom Of The Ocean Buried. Now Are Our Bron Our House In The Deep
-                            Bosom Of The Ocean Buried. Now Are Our Brows Bound Witwse Glorious
-                            Summer By This Sun Of York; And All The Clouds That Lour'd Upon Our
-                            House In The Deep Bosom Of The Ocean Buried. Now Are Our Browsr
-                            Monuments; Our Stern Alarums Changed To Merry Meetings, Our Dreadful
-                            Marches To Delightful Measures.
-                        </p>
-                        <p>
-                            Now Is The Winter Of Our Dis Bound With Victorious Wreaths; Our
-                            Bruised Arms Hung Up For Monuments; Our Stern Alarums Changed To
-                            Merry Meetings, Our Dreadful Marches To Delightful Measures.
+                <div class="wrapper about_us" v-if="slider">
+                    <div class="content" >
+                        <div class="title" v-html="slider.fields.title.value"></div>
+                        <p v-html="slider.fields.description.value">
                         </p>
                     </div>
                     <div class="slider">
                         <div id="hero_slider">
-                            <img src="/landing_resources/img/about/1.png" alt="" />
-                            <img src="/landing_resources/img/about/2.png" alt="" />
+                            <img v-for="img in slider.fields.fields.value" :src="img[0].value" alt="" />
                         </div>
                         <button id="prev_slide">
                             <img src="/landing_resources/img/icons/slider/prev.png" alt="" />
@@ -56,6 +35,24 @@ export default {
     components: {
         Landing,
 
+    },
+    props: {
+        page: {
+            type: Array
+        }
+
+    },
+    computed: {
+        slider() {
+            let i;
+            this.page.forEach(element => {
+                if (element.key==="slider"){
+                    i = element;
+                }
+            });
+            return i;
+
+        },
     }
 }
 </script>

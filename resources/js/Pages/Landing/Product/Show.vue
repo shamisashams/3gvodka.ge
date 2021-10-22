@@ -19,7 +19,7 @@
                         <span class="op">For Order:</span>
                         <a href="contact.html" class="contact">Contact us</a>
                     </div>
-                    <button class="back">
+                    <button class="back" @click="redirect">
                         <LazyImage src="/landing_resources/img/icons/pag/back.svg" alt="" />Back to products
                     </button>
                 </div>
@@ -41,10 +41,18 @@ export default {
         product: {
             type: Array
         },
+        goBack: {
+            type: String
+        }
     },
     computed: {
         prod: function (){
             return this.product[0];
+        }
+    },
+    methods: {
+        redirect(){
+            window.location.href = this.goBack;
         }
     }
 
