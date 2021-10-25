@@ -44,4 +44,19 @@ class BrandData
         }
         return $brandsData;
     }
+
+    public function getBrandsProducts($slug)
+    {
+        $brand = Brand::with([
+            'translations',
+            'images',
+        ])->with(['products' => function($query){
+            $query->with("images")->where('status', 1)->paginate(2);
+        }])
+            ->active()
+            ->where('id', getIdFromSlug($slug))->firstOrFail();
+
+        dd($brand);
+        return (new BrandItemResource($brand))->toArrayForShow();
+    }
 }

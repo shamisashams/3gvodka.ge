@@ -6,7 +6,7 @@
             <div class="news_page wrapper">
                 <div class="title60" v-if="news_title" v-html="news_title.fields.title.value"></div>
                 <div class="grid">
-                    <div class="news_item" v-for="neww in news">
+                    <div class="news_item" v-for="neww in news_item">
                         <div class="img">
                             <LazyImage :src="neww.profile_image" a:lt="neww.title" />
                         </div>
@@ -17,13 +17,12 @@
                     </div>
                 </div>
 
-                <div class="pagination flex center">
-                    <button class="arr"><img src="/landing_resources/img/icons/pag/prev.svg" alt="" /></button>
-                    <button class="num active">1</button>
-                    <button class="num">2</button>
-                    <button class="num">3</button>
-                    <button class="arr"><img src="/landing_resources/img/icons/pag/next.svg" alt="" /></button>
-                </div>
+                <pagination
+                    :current-page="news.current_page"
+                    :prev_page_url="news.prev_page_url"
+                    :next_page_url="news.next_page_url"
+                    :links="news.links"
+                />
             </div>
         </template>
 
@@ -33,12 +32,15 @@
 <script>
 import Landing from "@/Layouts/Landing";
 import LazyImage from "@/Components/Web/Image/Image";
+import Pagination from "@/Components/Pagination/Pagination";
+
 
 
 export default {
     components: {
         Landing,
         LazyImage,
+        Pagination
     },
     props: {
         news: {
@@ -51,13 +53,17 @@ export default {
     computed: {
         news_title() {
             let i;
+            // console.log(this.news.next_page_url)
             this.page.forEach(element => {
-                if (element.key==="blog"){
+                if (element.key==="hero"){
                     i = element;
                 }
             });
             return i;
 
+        },
+        news_item() {
+            return this.news.data;
         }
     },
 

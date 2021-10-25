@@ -48,7 +48,7 @@
                         <img src="/landing_resources/img/logo/1.png" alt="" />
                     </a>
                     <div class="navbar">
-                        <inertia-link :href="locale_route(locales.current_locale,'/')">home</inertia-link>
+                        <a :href="locale_route(locales.current_locale,'/')">home</a>
                         <inertia-link :href="locale_route(locales.current_locale,'/product')">products & Partners</inertia-link>
                         <inertia-link :href="locale_route(locales.current_locale,'/news')">news</inertia-link>
                         <inertia-link :href="locale_route(locales.current_locale,'/about')">About us</inertia-link>

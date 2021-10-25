@@ -1,33 +1,29 @@
 <template>
     <landing class="home">
         <template v-slot:main>
-            <section class="showcase product"></section>
+            <section class="showcase product" :style="cssProps"></section>
 
             <div class="product_page wrapper">
                 <div class="brnd">
-                    <img src="/landing_resources/img/products/logo.png" alt="" />
-                    Croco
+                    <LazyImage :src="brand.icon_image" alt="" />
+                    {{brand.title}}
                 </div>
-                <p>
-                    Lorem Ipsum Madolor Sit Amet, Consectetur Adipisicing Elit, Sed Do
-                    Eiusmod Tempor Coli Incidit Labore Lorem Ipsum Amet Madolor Sit Amet.
-                </p>
+                <p v-html="brand.description"></p>
                 <div class="grid">
                     <div class="item" v-for="product in products">
-                        <img :src="'/storage/'+product.images[0].src" alt="" />
+                        <img v-if="product.images[0]" :src="'/storage/'+product.images[0].src" alt="" />
                         <button class="name">{{ product.title }}</button>
                         <p v-html="product.short_description"></p>
                         <inertia-link :href="productUrl(product)">Learn More</inertia-link>
                     </div>
 
                 </div>
-                <div class="pagination flex center">
-                    <button class="arr"><img src="/landing_resources/img/icons/pag/prev.svg" alt="" /></button>
-                    <button class="num active">1</button>
-                    <button class="num">2</button>
-                    <button class="num">3</button>
-                    <button class="arr"><img src="/landing_resources/img/icons/pag/next.svg" alt="" /></button>
-                </div>
+                <pagination
+                    :current-page="brand.products.current_page"
+                    :prev_page_url="brand.products.prev_page_url"
+                    :next_page_url="brand.products.next_page_url"
+                    :links="brand.products.links"
+                />
             </div>
 
         </template>
@@ -35,21 +31,33 @@
 </template>
 <script>
 import landing from "@/Layouts/Landing";
+import Pagination from "@/Components/Pagination/Pagination";
+import LazyImage from "@/Components/Web/Image/Image";
+
 
 
 export default {
     components: {
         landing,
+        Pagination,
+        LazyImage
     },
     props: {
         brand: {
             type: Array
         },
     },
+    data() {
+        return {
+            cssProps: {
+                background: `url(${this.brand.banner_image}) no-repeat`
+            }
+        }
+    },
 
     computed: {
         products: function () {
-            return this.brand.products;
+            return this.brand.products.data;
         }
     },
 

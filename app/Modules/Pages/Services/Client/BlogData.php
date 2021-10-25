@@ -31,14 +31,15 @@ class BlogData
     /**
      * @return array
      */
-    public function getBlogs(): array
+    public function getBlogs()
     {
         $blogs = $this->blogs::with(['translations', 'images'])
-            ->active()->orderBy('created_at', 'DESC')->take(3)->get();
-        $blogsData = [];
+            ->active()->orderBy('created_at', 'DESC')->paginate(6);
+        $blogsData = collect();
         foreach ($blogs->getIterator() as $blog) {
             $blogsData[] = (new BlogItemResource($blog))->toListItem();
         }
-        return $blogsData;
+        $blogs->setCollection($blogsData);
+        return $blogs;
     }
 }

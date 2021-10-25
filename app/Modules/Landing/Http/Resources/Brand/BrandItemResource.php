@@ -19,6 +19,7 @@ class BrandItemResource
      * @var Brand
      */
     protected $item;
+    protected $products;
 
     /**
      * BlogItemResource constructor.
@@ -47,9 +48,6 @@ class BrandItemResource
         ];
     }
 
-    /**
-     * @return array
-     */
     public function toArrayForShow()
     {
         return [
@@ -59,7 +57,7 @@ class BrandItemResource
             'main_image' => $this->item->getImageByKey('main'),
             'banner_image' => $this->item->getImageByKey('banner'),
             'icon_image' => $this->item->getImageByKey('icon'),
-            'products' => $this->item->products,
+            'products' => $this->item->products()->with("images")->paginate(12),
             'show_url'  =>route('product.show',''),
             'created_at' => $this->getDateFormat(),
         ];

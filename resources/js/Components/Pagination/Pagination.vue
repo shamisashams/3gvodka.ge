@@ -1,29 +1,37 @@
 <template>
-    <div class="paginations flex center margin_bottom">
+    <div class="pagination flex center">
+        <inertia-link v-if="prev_page_url" :href="prev_page_url">
+            <button class="arr"><img src="/landing_resources/img/icons/pag/prev.svg" alt=""/></button>
+        </inertia-link>
+        <template
+            v-for="(link, index) in links.slice(1, -1)"
+            :key="index"
+        >
 
-            <template
-                v-for="(link, index) in links.slice(1, -1)"
-                :key="index"
-            >
-                <inertia-link
-                    class="page_number medium flex center main_blue"
+            <inertia-link :href="link.url">
+                <button
+                    class="num"
                     :class="link.active ? 'active' : ''"
-                              :href="link.url">
-                    {{ label(link.label) }}
-                </inertia-link>
-            </template>
+                >
+                    {{ link.label }}
+                </button>
+            </inertia-link>
+        </template>
+        <inertia-link v-if="next_page_url" :href="next_page_url">
+
+            <button class="arr"><img src="/landing_resources/img/icons/pag/next.svg" alt=""/></button>
+        </inertia-link>
+
     </div>
 </template>
 
 <script>
 export default {
     props: {
-        links: Array
-    },
-    methods: {
-        label(label) {
-            return parseInt(label) < 10 ? `0${label}` : label;
-        }
+        links: Array,
+        prev_page_url: String,
+        next_page_url: String,
+
     }
 }
 </script>

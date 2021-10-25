@@ -36,8 +36,12 @@ class HandleInertiaRequests extends Middleware
      */
     public function share(Request $request)
     {
+        $language_urls = [];
+        foreach (config('language_manager.locales') as $lang){
+            $language_urls[$lang] = get_url($lang);
+        }
         return array_merge(parent::share($request), [
-            //
+            "available_locales"=>$language_urls
         ]);
     }
 

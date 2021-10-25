@@ -34,5 +34,7 @@ class AppServiceProvider extends ServiceProvider
             'App\\Validators\\ReCaptcha@validate'
         );
         Paginator::defaultView('vendor.pagination.bootstrap-4');
+        require_once (app()->basePath()."/app/Modules/Landing/Http/Helpers/get_url.php");
     }
+
 }
