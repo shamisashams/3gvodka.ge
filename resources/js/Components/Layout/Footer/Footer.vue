@@ -39,10 +39,10 @@
 
             </div>
             <div class="col col_2">
-                <inertia-link :href="locale_route(this.$page.props.locale,'/')" class="title">Home</inertia-link>
-                <inertia-link :href="locale_route(this.$page.props.locale,'/product')" class="title">Products & Partners</inertia-link>
+                <a :href="locale_route(this.$page.props.locale,'/')" class="title">Home</a>
+                <a :href="locale_route(this.$page.props.locale,'/product')" class="title">Products & Partners</a>
                 <inertia-link :href="locale_route(this.$page.props.locale,'/news')" class="title">News</inertia-link>
-                <inertia-link :href="locale_route(this.$page.props.locale,'/about')" class="title">About Us</inertia-link>
+                <a :href="locale_route(this.$page.props.locale,'/about')" class="title">About Us</a>
                 <inertia-link :href="locale_route(this.$page.props.locale,'/contact')" class="title">Contact</inertia-link>
             </div>
             <form class="col col_3 form" @submit.prevent="submit">

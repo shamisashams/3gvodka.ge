@@ -49,9 +49,9 @@
                     </a>
                     <div class="navbar">
                         <a :href="locale_route(locales.current_locale,'/')">home</a>
-                        <inertia-link :href="locale_route(locales.current_locale,'/product')">products & Partners</inertia-link>
+                        <a :href="locale_route(locales.current_locale,'/product')">products & Partners</a>
                         <inertia-link :href="locale_route(locales.current_locale,'/news')">news</inertia-link>
-                        <inertia-link :href="locale_route(locales.current_locale,'/about')">About us</inertia-link>
+                        <a :href="locale_route(locales.current_locale,'/about')">About us</a>
                         <inertia-link :href="locale_route(locales.current_locale,'/contact')">contact</inertia-link>
                     </div>
                     <div class="languages">
