@@ -19,21 +19,21 @@
         <a href="{{route('admin.blog.index')}}"><i class="el-icon-link sidebar-nav-icon"></i>
             <span class="sidebar-nav-mini-hide">@lang('admin.blogs.menu')</span></a>
     </li>
-    <li
-        {!! strpos(request()->route()->getName(), 'admin.project.') !== false ? ' class="active"' : '' !!}>
-        <a href="{{route('admin.project.index')}}"><i class="el-icon-link sidebar-nav-icon"></i>
-            <span class="sidebar-nav-mini-hide">@lang('admin.projects.menu')</span></a>
-    </li>
-    <li
-        {!! strpos(request()->route()->getName(), 'admin.service.') !== false ? ' class="active"' : '' !!}>
-        <a href="{{route('admin.service.index')}}"><i class="el-icon-link sidebar-nav-icon"></i>
-            <span class="sidebar-nav-mini-hide">@lang('admin.service.menu')</span></a>
-    </li>
-    <li
-        {!! strpos(request()->route()->getName(), 'admin.team.') !== false ? ' class="active"' : '' !!}>
-        <a href="{{route('admin.team.index')}}"><i class="el-icon-link sidebar-nav-icon"></i>
-            <span class="sidebar-nav-mini-hide">@lang('admin.teams.menu')</span></a>
-    </li>
+{{--    <li--}}
+{{--        {!! strpos(request()->route()->getName(), 'admin.project.') !== false ? ' class="active"' : '' !!}>--}}
+{{--        <a href="{{route('admin.project.index')}}"><i class="el-icon-link sidebar-nav-icon"></i>--}}
+{{--            <span class="sidebar-nav-mini-hide">@lang('admin.projects.menu')</span></a>--}}
+{{--    </li>--}}
+{{--    <li--}}
+{{--        {!! strpos(request()->route()->getName(), 'admin.service.') !== false ? ' class="active"' : '' !!}>--}}
+{{--        <a href="{{route('admin.service.index')}}"><i class="el-icon-link sidebar-nav-icon"></i>--}}
+{{--            <span class="sidebar-nav-mini-hide">@lang('admin.service.menu')</span></a>--}}
+{{--    </li>--}}
+{{--    <li--}}
+{{--        {!! strpos(request()->route()->getName(), 'admin.team.') !== false ? ' class="active"' : '' !!}>--}}
+{{--        <a href="{{route('admin.team.index')}}"><i class="el-icon-link sidebar-nav-icon"></i>--}}
+{{--            <span class="sidebar-nav-mini-hide">@lang('admin.teams.menu')</span></a>--}}
+{{--    </li>--}}
 
     <li class="sidebar-header">
         <span class="sidebar-header-options clearfix"><a href="javascript:void(0)" data-toggle="tooltip" title=""

@@ -19,12 +19,12 @@ return [
     /**
      * Admin user avatar url.
      */
-    'user_avatar'           => 'admin_resources/img/placeholders/avatars/avatar_vito.jpg',
+    'user_avatar'           => 'admin_resources/img/placeholders/avatars/avatar_admin.jpg',
 
     /**
      * Project name.
      */
-    'project_name'          => env('PROJECT_NAME', 'Vito Panel'),
+    'project_name'          => env('PROJECT_NAME', 'Admin Panel'),
 
     /**
      * Project avatar url.
@@ -51,8 +51,8 @@ return [
     /**
      * Admin user
      */
-    'admin_user_name'           => env('ADMIN_USER_EMAIL', 'https://github.com/makhatadze'),
-    'admin_user_password'       => env('ADMIN_USER_PASSWORD', ''),
+    'admin_user_name'           => env('ADMIN_USER_EMAIL', 'admin@gmail.com'),
+    'admin_user_password'       => env('ADMIN_USER_PASSWORD', 'admin'),
 
     /**
      * Image upload config.

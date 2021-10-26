@@ -17,7 +17,7 @@
                     </div>
                     <div>
                         <span class="op">For Order:</span>
-                        <a href="contact.html" class="contact">Contact us</a>
+                        <inertia-link :href="locale_route(this.$page.props.locale,'/contact')" class="contact">Contact us</inertia-link>
                     </div>
                     <button class="back" @click="redirect">
                         <LazyImage src="/landing_resources/img/icons/pag/back.svg" alt="" />Back to products

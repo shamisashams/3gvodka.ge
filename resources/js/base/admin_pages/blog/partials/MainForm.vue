@@ -63,9 +63,9 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="col-md-2 control-label">{{ lang.profile_image }}</label>
+                                        <label class="col-md-2 control-label">{{ lang.image_profile }}</label>
                                         <div class="col-md-6">
-                                            <input style="display: block !important;" id="profile" ref="file"
+                                            <input style="display: block !important;" id="profile"
                                                    type="file"
                                                    v-on:change="handleFileUpload('profile')"/>
                                         </div>
@@ -76,6 +76,24 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">{{ lang.image_banner }}</label>
+                                        <div class="col-md-6">
+                                            <input style="display: block !important;" id="banner"
+                                                   type="file"
+                                                   v-on:change="handleFileUpload('banner')"/>
+                                        </div>
+
+                                        <div v-if="form.images && form.images.banner">
+                                            <div class="col-md-offset-2 col-md-4 padding-t">
+                                                <img :src="form.images.banner.item.full_src" style="width: 100%;">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
 
                                     <div class="form-group">
                                         <label class="col-md-2 control-label">{{ lang.status }}</label>
@@ -171,7 +189,7 @@ export default {
 
         },
         async handleFileUpload(inputId) {
-            let file = this.$refs.file.files[0];
+            let file = event.target.files[0];
 
             var data = new FormData();
             data.append('file', file);

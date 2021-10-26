@@ -617,7 +617,6 @@ img {
 .showcase.news {
     height: 388px;
     width: 100%;
-    background: url(/landing_resources/img/news/bg.png) no-repeat;
     background-position: center;
     background-size: cover;
     margin-bottom: 30px;

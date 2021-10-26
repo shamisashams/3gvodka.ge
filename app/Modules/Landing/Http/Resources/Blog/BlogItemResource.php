@@ -39,6 +39,7 @@ class BlogItemResource
             'title' => $this->item->title,
             'description' => $this->item->description,
             'profile_image' => $this->item->getImageByKey('profile'),
+            'banner_image' => $this->item->getImageByKey('banner'),
             'show_url'  =>route('news.show',generateSlug($this->item->id,$this->item->title)),
             'created_at' => $this->getDateFormat(),
         ];
@@ -54,6 +55,7 @@ class BlogItemResource
             'title' => $this->item->title,
             'description' => $this->item->description,
             'profile_image' => $this->item->getImageByKey('profile'),
+            'banner_image' => $this->item->getImageByKey('banner'),
             'gallery' => $this->item->galleries_meta,
             'created_at' => $this->getDateFormat(),
         ];

@@ -2,7 +2,7 @@
     <Landing >
 
     <template v-slot:main>
-        <div class="showcase news flex"><span>{{ neww.title }}</span></div>
+        <div class="showcase news flex" :style="cssProps"><span>{{ neww.title }}</span></div>
         <div class="wrapper show_news">
             <img :src="neww.profile_image" alt="" />
             <p v-html="neww.description"></p>
@@ -29,8 +29,16 @@ export default {
           type: String
         }
     },
+    data() {
+        return {
+            cssProps: {
+                background: `url(${this.news[0].banner_image}) no-repeat`
+            }
+        }
+    },
     computed: {
         neww: function (){
+            console.log(this.news[0])
             return this.news[0];
         }
     },

@@ -58,6 +58,7 @@ class BlogHelper
             'description' => __($baseFullLangName . 'description'),
             'date' => __($baseFullLangName . 'date'),
             'image_profile' => __($baseFullLangName . 'image_profile'),
+            'image_banner' => __($baseFullLangName . 'image_banner'),
             'files' => __($baseFullLangName . 'files'),
             'add_element' => __($baseFullLangName . 'add_element'),
             'close_fields' => __($baseFullLangName . 'close_fields'),

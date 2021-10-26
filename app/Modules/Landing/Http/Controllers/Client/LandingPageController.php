@@ -75,12 +75,13 @@ class LandingPageController extends Controller
         $brands = (new BrandData())->getBrands();
 
 
-        $allSeoData = SeoData::setTitle(__('seo.home.title'))
-            ->setDescription(__('seo.home.description'))
-            ->setKeywords(__('seo.home.description'))
-            ->setOgTitle(__('seo.home.title'))
-            ->setOgDescription(__('seo.home.description'))
+        $allSeoData = SeoData::setTitle(__('seo.products.title'))
+            ->setDescription(__('seo.products.description'))
+            ->setKeywords(__('seo.products.description'))
+            ->setOgTitle(__('seo.products.title'))
+            ->setOgDescription(__('seo.products.description'))
             ->getSeoData();
+
 
         View::composer('app', function ($view) use ($allSeoData) {
             $view->with('allSeoData', $allSeoData);
@@ -160,6 +161,17 @@ class LandingPageController extends Controller
         $page = Page::where('name', 'about')->first();
         $pageData = $page ? (new PageMetaInfoResource($page->meta))->toArray($request) : [];
 
+        $allSeoData = SeoData::setTitle(__('seo.about.title'))
+            ->setDescription(__('seo.about.description'))
+            ->setKeywords(__('seo.about.description'))
+            ->setOgTitle(__('seo.about.title'))
+            ->setOgDescription(__('seo.about.description'))
+            ->getSeoData();
+
+        View::composer('app', function ($view) use ($allSeoData) {
+            $view->with('allSeoData', $allSeoData);
+        });
+
         return Jetstream::inertia()->render($request, 'Landing/About/Index',[
             'page' => $pageData
         ]);
@@ -177,6 +189,17 @@ class LandingPageController extends Controller
      */
     public function contact(Request $request): Response
     {
+        $allSeoData = SeoData::setTitle(__('seo.contact.title'))
+            ->setDescription(__('seo.contact.description'))
+            ->setKeywords(__('seo.contact.description'))
+            ->setOgTitle(__('seo.contact.title'))
+            ->setOgDescription(__('seo.contact.description'))
+            ->getSeoData();
+
+        View::composer('app', function ($view) use ($allSeoData) {
+            $view->with('allSeoData', $allSeoData);
+        });
+
         return Jetstream::inertia()->render($request, 'Landing/Contact/Index');
     }
 
@@ -190,11 +213,11 @@ class LandingPageController extends Controller
 //        dd($news);
 
 
-        $allSeoData = SeoData::setTitle(__('seo.home.title'))
-            ->setDescription(__('seo.home.description'))
-            ->setKeywords(__('seo.home.description'))
-            ->setOgTitle(__('seo.home.title'))
-            ->setOgDescription(__('seo.home.description'))
+        $allSeoData = SeoData::setTitle(__('seo.news.title'))
+            ->setDescription(__('seo.news.description'))
+            ->setKeywords(__('seo.news.description'))
+            ->setOgTitle(__('seo.news.title'))
+            ->setOgDescription(__('seo.news.description'))
             ->getSeoData();
 
         View::composer('app', function ($view) use ($allSeoData) {
@@ -224,7 +247,7 @@ class LandingPageController extends Controller
 
         $page = Page::where('name', 'blog')->first();
         $pageData = $page ? (new PageMetaInfoResource($page->meta))->toArray($request) : [];
-
+//        dd($news["relations"]);
 //        dd((new ProductItemResource($product))->toArrayForShow());
         return Jetstream::inertia()->render($request, 'Landing/News/Show', [
             'news' => array((new BlogItemResource($news))->toArrayForShow()),

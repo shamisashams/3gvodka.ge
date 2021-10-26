@@ -34,15 +34,15 @@ class Page extends BaseModel
     /**
      * Pages name.
      */
-    const NAME_HOME = 'home';
+//    const NAME_HOME = 'home';
     const NAME_MAILER = 'mail';
     const NAME_PRODUCT = 'product';
-    const NAME_PROJECT = 'project';
+//    const NAME_PROJECT = 'project';
     const NAME_BLOG = 'blog';
-    const NAME_TEAM = 'team';
+//    const NAME_TEAM = 'team';
     const NAME_ABOUT = 'about';
     const NAME_CONTACT = 'contact';
-    const NAME_SERVICE = 'service';
+//    const NAME_SERVICE = 'service';
     const NAME_SOCIAL = 'social';
     const NAME_SEO = 'seo';
 
