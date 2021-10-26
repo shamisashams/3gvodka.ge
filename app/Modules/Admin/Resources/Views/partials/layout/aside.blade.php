@@ -7,7 +7,7 @@
     <li
         {!! strpos(request()->route()->getName(), 'admin.brand.') !== false ? ' class="active"' : '' !!}>
         <a href="{{route('admin.brand.index')}}"><i class="el-icon-link sidebar-nav-icon"></i>
-            <span class="sidebar-nav-mini-hide">@lang('admin.brands.menu')</span></a>
+            <span class="sidebar-nav-mini-hide">@lang('admin.brand.menu')</span></a>
     </li>
     <li
         {!! strpos(request()->route()->getName(), 'admin.product.') !== false ? ' class="active"' : '' !!}>

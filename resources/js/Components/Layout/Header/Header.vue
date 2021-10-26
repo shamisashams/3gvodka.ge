@@ -48,7 +48,7 @@
                         <img src="/landing_resources/img/logo/1.png" alt="" />
                     </a>
                     <div class="navbar">
-                        <a :href="locale_route(locales.current_locale,'/')">home</a>
+                        <a :href="locale_route(locales.current_locale,'/')">{{__('client.home_page')}}</a>
                         <a :href="locale_route(locales.current_locale,'/product')">products & Partners</a>
                         <inertia-link :href="locale_route(locales.current_locale,'/news')">news</inertia-link>
                         <a :href="locale_route(locales.current_locale,'/about')">About us</a>

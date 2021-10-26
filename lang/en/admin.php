@@ -1,7 +1,7 @@
 <?php
 
 return array (
-  'text' => 
+  'text' =>
   array (
     'import_successfully' => 'ატვირთულია',
     'delete_confirm' => 'გსურს წაშლა?',
@@ -25,7 +25,7 @@ return array (
     'delete_successfully' => 'წაშლილია',
     'index' => 'ინტერფეისის ენა',
   ),
-  'user' => 
+  'user' =>
   array (
     'email' => 'E-mail',
     'created_at' => 'შეიქმნა',
@@ -49,7 +49,7 @@ return array (
     'confirm_save_no' => 'არა',
     'index' => 'სისტ. მომხმარებლები',
   ),
-  'role' => 
+  'role' =>
   array (
     'permission' => 'უფლება',
     'select_permissions' => 'უფლების მიცემა',
@@ -66,7 +66,7 @@ return array (
     'confirm_save_yes' => 'დიახ',
     'index' => 'როლები',
   ),
-  'profile' => 
+  'profile' =>
   array (
     'update' => 'პირადი კაბინეტი',
     'name' => 'სახელი',
@@ -81,14 +81,14 @@ return array (
     'iban' => 'IBAN',
     'confirm_save' => 'გსურს დამახსოვრება?',
     'confirm_save_no' => 'არა',
-    'profile' => 
+    'profile' =>
     array (
       'yes' => 'დიახ',
     ),
     'confirm_save_yes' => 'დიახ',
     'save_successfully' => 'შენახულია',
   ),
-  'customer' => 
+  'customer' =>
   array (
     'surname' => 'გვარი',
     'phone_number' => 'ტელეფონი',
@@ -127,14 +127,14 @@ return array (
     'active' => 'აქტიური',
     'email' => 'ელ.ფოსტა',
   ),
-  'file' => 
+  'file' =>
   array (
     'upload_successfully' => 'ატვირთულია',
   ),
   'ka' => 'ინგლისური',
   'en' => 'EN',
   'ru' => 'RU',
-  'citizenship' => 
+  'citizenship' =>
   array (
     'country_code' => 'ქვეყნის კოდი',
     'title' => 'ქვეყანა',
@@ -149,7 +149,7 @@ return array (
     'save_successfully' => 'შენახულია',
     'update_status_successfully' => 'სტატუსი შეცვლილია',
   ),
-  'event' => 
+  'event' =>
   array (
     'description' => 'ღონისძიების აღწერა',
     'profile_image' => 'მთავარი ფოტო',
@@ -241,7 +241,7 @@ return array (
     'type_request	' => 'მოთხოვნით',
     'type_request' => 'მოთხოვნით',
   ),
-  'company' => 
+  'company' =>
   array (
     'menu' => 'კომპანიები',
     'description' => 'admin.company.description',
@@ -278,7 +278,7 @@ return array (
     'identify_id' => 'საიდენტიფიკაციო კოდი',
     'address' => 'კომპანიის მისამართი',
   ),
-  'company_activity' => 
+  'company_activity' =>
   array (
     'menu' => 'კომპანიის საქმიანობა',
     'index' => 'კატალოგი',
@@ -300,7 +300,7 @@ return array (
     'id' => 'ID ნომერი',
     'title' => 'დასახელება',
   ),
-  'activity' => 
+  'activity' =>
   array (
     'id' => 'ID ნომერი',
     'status' => 'სტატუსი',
@@ -314,29 +314,29 @@ return array (
     'status_no' => 'არა',
     'save_successfully' => 'შენახულია',
   ),
-  'admin' => 
+  'admin' =>
   array (
     'action' => 'რედაქტირება',
     'search' => 'ძებნა',
-    'text' => 
+    'text' =>
     array (
       'save_successfully' => 'დამატებულია',
       'delete_successfully' => 'წაშლილია',
     ),
-    'company' => 
+    'company' =>
     array (
       'save_successfully' => 'შენახულია',
     ),
-    'story' => 
+    'story' =>
     array (
       'modules_default' => 'Default',
     ),
-    'page' => 
+    'page' =>
     array (
       'modules_default_seo_description' => 'აღწერა',
       'modules_contact_description' => 'აღწერა',
     ),
-    'training' => 
+    'training' =>
     array (
       'status_pending_moderator' => 'Pending Moderator',
     ),
@@ -345,11 +345,11 @@ return array (
   'search' => 'ძებნა',
   'result_not_found' => 'არ მოიძებნა',
   'reset' => 'გასუფთავება',
-  'custumer' => 
+  'custumer' =>
   array (
     'not_verified' => 'არავერიფიცირებული',
   ),
-  'doctor_type' => 
+  'doctor_type' =>
   array (
     'menu' => 'სპეციალობა',
     'index' => 'სპეციალობა',
@@ -371,18 +371,18 @@ return array (
     'id' => 'ID ნომერი',
     'title' => 'დასახელება',
   ),
-  ' No ReaderType or WriterType could be detected' => 
+  ' No ReaderType or WriterType could be detected' =>
   array (
-    ' Make sure you either pass a valid extension to the filename or pass an explicit type' => 
+    ' Make sure you either pass a valid extension to the filename or pass an explicit type' =>
     array (
       '' => 'გთხოვთ, მიაბით ფაილი',
     ),
   ),
-  'home' => 
+  'home' =>
   array (
     'menu' => 'მთავარი გვერდი',
   ),
-  'page' => 
+  'page' =>
   array (
     'edit' => 'გვერდის რედაქტირება',
     'save_text' => 'შენახვა',
@@ -499,7 +499,7 @@ return array (
     'modules_slider_fields_button_text' => 'ღილაკის ტექსტი',
     'modules_slider_fields_button_link' => 'link',
   ),
-  'story' => 
+  'story' =>
   array (
     'modules_slider' => 'სლაიდერები',
     'modules_blocks' => 'ბლოკები',
@@ -533,15 +533,24 @@ return array (
     'modules_statistic' => 'სტატისტიკა',
     'modules_section_one_fields_image  ' => 'ფოტო',
   ),
-  'about' => 
+  'about' =>
   array (
     'menu' => 'ჩვენს შესახებ',
   ),
-  'privacy' => 
+    'mail' =>
+        array (
+            'menu' => 'მეილი',
+            "modules_mail" => "მეილი"
+        ),
+    'about' =>
+        array (
+            'menu' => 'ჩვენს შესახებ',
+        ),
+  'privacy' =>
   array (
     'menu' => 'კონფიდ. პოლიტიკა',
   ),
-  'blog' => 
+  'blog' =>
   array (
     'menu' => 'სიახლეები',
     'create' => 'დამატება',
@@ -569,11 +578,67 @@ return array (
     'meta_title' => 'მეტა დასახელება',
     'seo_tab' => 'SEO',
   ),
-  'seo' => 
+    'product' =>
+        array (
+            'menu' => 'პროდუქტები',
+            'create' => 'დამატება',
+            'id' => 'ID ნომერი',
+            'title' => 'სათაური',
+            'status' => 'სტატუსი',
+            'update_status_successfully' => 'სტატუსი შეცვლილია',
+            'description' => 'აღწერა',
+            'date' => 'თარიღი',
+            'status_yes' => 'ჩართული',
+            'status_no' => 'გამორთული',
+            'save_text' => 'შენახვა',
+            'save_successfully' => 'შენახულია',
+            'edit' => 'რედაქტირება',
+            'index' => 'სიახლეები',
+            'main_tab' => 'მთავარი',
+            'galleries_tab' => 'გალერია',
+            'blog_directions' => 'მიმართულება',
+            'galleries' => 'ფოტო',
+            'add_element' => 'დამატება',
+            'close_fields' => 'გასვლა',
+            'save_fields' => 'შენახვა',
+            'meta_description' => 'მეტა აღწერა',
+            'meta_keyword' => 'მეტა ქივორდი',
+            'meta_title' => 'მეტა დასახელება',
+            'seo_tab' => 'SEO',
+        ),
+    'brand' =>
+        array (
+            'menu' => 'ბრენდები',
+            'create' => 'დამატება',
+            'id' => 'ID ნომერი',
+            'title' => 'სათაური',
+            'status' => 'სტატუსი',
+            'update_status_successfully' => 'სტატუსი შეცვლილია',
+            'description' => 'აღწერა',
+            'date' => 'თარიღი',
+            'status_yes' => 'ჩართული',
+            'status_no' => 'გამორთული',
+            'save_text' => 'შენახვა',
+            'save_successfully' => 'შენახულია',
+            'edit' => 'რედაქტირება',
+            'index' => 'სიახლეები',
+            'main_tab' => 'მთავარი',
+            'galleries_tab' => 'გალერია',
+            'blog_directions' => 'მიმართულება',
+            'galleries' => 'ფოტო',
+            'add_element' => 'დამატება',
+            'close_fields' => 'გასვლა',
+            'save_fields' => 'შენახვა',
+            'meta_description' => 'მეტა აღწერა',
+            'meta_keyword' => 'მეტა ქივორდი',
+            'meta_title' => 'მეტა დასახელება',
+            'seo_tab' => 'SEO',
+        ),
+  'seo' =>
   array (
     'menu' => 'SEO',
   ),
-  'auth' => 
+  'auth' =>
   array (
     'failed' => 'დაფიქსირდა შეცდომა',
     'login' => 'შესვლა',
@@ -581,38 +646,38 @@ return array (
     'password' => 'პაროლი',
     'email' => 'ელ.ფოსტა',
   ),
-  'dashboard' => 
+  'dashboard' =>
   array (
     'index' => 'ადინისტრირების პორტალი',
   ),
-  'faq' => 
+  'faq' =>
   array (
     'menu' => 'FAQ',
   ),
-  'terms' => 
+  'terms' =>
   array (
     'menu' => 'წესები და პირობები',
   ),
-  'contact' => 
+  'contact' =>
   array (
     'menu' => 'კონტაქტი',
   ),
-  ' admin' => 
+  ' admin' =>
   array (
-    'page' => 
+    'page' =>
     array (
       'modules_contact_email' => 'E-mail',
     ),
   ),
-  'social' => 
+  'social' =>
   array (
     'menu' => 'Social Media',
   ),
-  'beta-modal' => 
+  'beta-modal' =>
   array (
     'menu' => 'Beta',
   ),
-  'training' => 
+  'training' =>
   array (
     'training_form' => 'ჩატარების ფორმა',
     'event_iframe' => 'IFRAME',
@@ -691,7 +756,7 @@ return array (
     'type_request' => 'მოთხოვნით',
   ),
   'start date' => 'დაწყების დრო',
-  'lecturer' => 
+  'lecturer' =>
   array (
     'menu' => 'ტრენერები',
     'lecturer_directions' => 'მიმართულება',
@@ -709,7 +774,7 @@ return array (
     'edit' => 'რედაქტირება',
     'export' => 'ჩამოტვირთვა',
   ),
-  'direction' => 
+  'direction' =>
   array (
     'id' => 'ID',
     'title' => 'მიმართულება',
@@ -723,7 +788,7 @@ return array (
     'index' => 'მიმართულებები',
     'no_one' => 'ცარიელი',
   ),
-  'company_employee' => 
+  'company_employee' =>
   array (
     'menu' => 'თანამშრომლები',
     'name' => 'სახელი, გვარი',
@@ -739,7 +804,7 @@ return array (
     'edit' => 'რედაქტირება',
     'export' => 'ჩამოტვირთვა',
   ),
-  'training_session' => 
+  'training_session' =>
   array (
     'create' => 'დამატება',
     'id' => 'ID',
@@ -784,14 +849,14 @@ return array (
     'users_can_registers' => 'მომხმარებლები',
     'link' => 'link',
   ),
-  'event_session' => 
+  'event_session' =>
   array (
     'status_active' => 'აქტიური',
     'status_completed' => 'დასრულებული',
   ),
   'Cancel' => 'არა',
   'Attention!' => 'ყურადღება!',
-  'session_request' => 
+  'session_request' =>
   array (
     'menu' => 'მოთხოვნები',
     'index' => 'მოთხოვნები',
@@ -826,15 +891,15 @@ return array (
     'user' => 'მომხმარებელი',
   ),
   'entity_type' => 'ტიპი',
-  'setting' => 
+  'setting' =>
   array (
     'menu' => 'Setting',
   ),
-  'event_session_attempt' => 
+  'event_session_attempt' =>
   array (
     'menu' => 'დარეგისტრ. მცდელობები',
   ),
-  'training_session_attempt' => 
+  'training_session_attempt' =>
   array (
     'index' => 'ტრენინგზე დარეგისტრირების მცდელობები',
     'id' => 'ID',
@@ -857,7 +922,7 @@ return array (
     'created_at' => 'დარეგისტრირების მცდელობის დრო',
     'timezone' => 'timezone',
   ),
-  'review' => 
+  'review' =>
   array (
     'menu' => 'შეფასებები',
   ),
