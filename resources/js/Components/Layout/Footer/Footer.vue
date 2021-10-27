@@ -39,11 +39,11 @@
 
             </div>
             <div class="col col_2">
-                <a :href="locale_route(this.$page.props.locale,'/')" class="title">Home</a>
-                <a :href="locale_route(this.$page.props.locale,'/product')" class="title">Products & Partners</a>
-                <inertia-link :href="locale_route(this.$page.props.locale,'/news')" class="title">News</inertia-link>
-                <a :href="locale_route(this.$page.props.locale,'/about')" class="title">About Us</a>
-                <inertia-link :href="locale_route(this.$page.props.locale,'/contact')" class="title">Contact</inertia-link>
+                <a :href="locale_route(this.$page.props.locale,'/')" class="title">{{ __('home') }}</a>
+                <a :href="locale_route(this.$page.props.locale,'/product')" class="title">{{ __('product') }}</a>
+                <inertia-link :href="locale_route(this.$page.props.locale,'/news')" class="title">{{ __('news') }}</inertia-link>
+                <a :href="locale_route(this.$page.props.locale,'/about')" class="title">{{ __('about') }}</a>
+                <inertia-link :href="locale_route(this.$page.props.locale,'/contact')" class="title">{{ __('contact') }}</inertia-link>
             </div>
             <form class="col col_3 form" @submit.prevent="submit">
                 <input type="text " placeholder="Name" v-model="form.name"/>
@@ -51,10 +51,10 @@
                 <textarea placeholder="Text Here" v-model="form.message"></textarea>
                 <button>
             <span id="send_msg"
-            ><img src="/landing_resources/img/icons/header/8.svg" alt=""/>Send Message</span
+            ><img src="/landing_resources/img/icons/header/8.svg" alt=""/>{{ __('send message') }}</span
             >
                     <span id="sent"
-                    ><img src="/landing_resources/img/icons/header/9.svg" alt=""/> Message Sent</span
+                    ><img src="/landing_resources/img/icons/header/9.svg" alt=""/>{{ __('message sent') }}</span
                     >
                 </button>
             </form>
@@ -69,7 +69,7 @@
                         loading="lazy"
                     ></iframe>
                 </div>
-                <div class="title">Find Us On A Map</div>
+                <div class="title">{{ __('find us on a map') }}</div>
             </div>
 
 

@@ -14,7 +14,7 @@
                         <img v-if="product.images[0]" :src="'/storage/'+product.images[0].src" alt="" />
                         <button class="name">{{ product.title }}</button>
                         <p v-html="product.short_description"></p>
-                        <inertia-link :href="productUrl(product)">Learn More</inertia-link>
+                        <inertia-link :href="productUrl(product)">{{ __('learn more') }}</inertia-link>
                     </div>
 
                 </div>

@@ -7,7 +7,7 @@
             <img :src="neww.profile_image" alt="" />
             <p v-html="neww.description"></p>
             <button class="back" v-on:click="goBack">
-                <img src="/landing_resources/img/icons/pag/back.svg" alt="" />Back to News
+                <img src="/landing_resources/img/icons/pag/back.svg" alt="" />{{ __('back to news') }}
             </button>
         </div>
 

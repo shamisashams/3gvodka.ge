@@ -41,10 +41,12 @@ class ContactSend extends Mailable
      */
     public function build(): ContactSend
     {
-        $mailTo = Page::whereIn('name', [ Page::NAME_CONTACT])->firstOrFail();
+//        $mailTo = Page::whereIn('name', [ Page::NAME_CONTACT])->firstOrFail();
+        $mailTo = Page::where('name', Page::NAME_MAILER)->first();
+
         $mailTo = (new PageMetaInfoResource($mailTo->meta))->toArray()[0];
-//        dd($mailTo["fields"]["email"]["value"]);
+
         return $this->from($mailTo["fields"]["email"]["value"], $this->data['name'])
-            ->subject($this->data['subject'])->view('email.contact', ['data' => $this->data]);
+            ->subject($mailTo["fields"]["subject"]["value"])->view('email.contact', ['data' => $this->data]);
     }
 }

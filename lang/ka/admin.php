@@ -1,7 +1,7 @@
 <?php
 
 return array (
-  'text' => 
+  'text' =>
   array (
     'key' => 'key',
     'file_name' => 'დასახელება',
@@ -22,13 +22,13 @@ return array (
     'delete_successfully' => 'წაშლილია',
     'index' => 'ინტერფეისის ენა',
   ),
-  'customer' => 
+  'customer' =>
   array (
     'name' => 'მომხმარებლის სახელი',
     'surname' => 'გვარი',
     'phone_number' => 'ტელეფონი',
   ),
-  'user' => 
+  'user' =>
   array (
     'created_at' => 'შეიქმნა',
     'roles_name' => 'როლები',
@@ -45,7 +45,7 @@ return array (
     'confirm_save_no' => 'არა',
     'index' => 'სისტ. მომხმარებლები',
   ),
-  'role' => 
+  'role' =>
   array (
     'permission' => 'უფლება',
     'select_permissions' => 'უფლების მიცემა',
@@ -57,56 +57,56 @@ return array (
     'confirm_save_yes' => 'დიახ',
     'index' => 'როლები',
   ),
-  'profile' => 
+  'profile' =>
   array (
     'update' => 'პირადი კაბინეტი',
-    'profile' => 
+    'profile' =>
     array (
       'yes' => 'დიახ',
     ),
     'confirm_save_yes' => 'დიახ',
     'save_successfully' => 'შენახულია',
   ),
-  'file' => 
+  'file' =>
   array (
     'upload_successfully' => 'ატვირთულია',
   ),
   'ka' => 'ქართული',
   'en' => 'EN',
   'ru' => 'RU',
-  'admin' => 
+  'admin' =>
   array (
-    'text' => 
+    'text' =>
     array (
       'save_successfully' => 'დამატებულია',
       'delete_successfully' => 'წაშლილია',
     ),
-    'company' => 
+    'company' =>
     array (
       'save_successfully' => 'შენახულია',
     ),
-    'story' => 
+    'story' =>
     array (
       'modules_default' => 'Default',
     ),
-    'page' => 
+    'page' =>
     array (
       'modules_default_seo_description' => 'აღწერა',
       'modules_contact_description' => 'აღწერა',
     ),
   ),
-  ' No ReaderType or WriterType could be detected' => 
+  ' No ReaderType or WriterType could be detected' =>
   array (
-    ' Make sure you either pass a valid extension to the filename or pass an explicit type' => 
+    ' Make sure you either pass a valid extension to the filename or pass an explicit type' =>
     array (
       '' => 'გთხოვთ, მიაბით ფაილი',
     ),
   ),
-  'home' => 
+  'home' =>
   array (
     'menu' => 'მთავარი გვერდი',
   ),
-  'page' => 
+  'page' =>
   array (
     'edit' => 'გვერდის რედაქტირება',
     'save_text' => 'შენახვა',
@@ -230,11 +230,11 @@ return array (
     'modules_contact_form_title' => 'ფორმის სათაური',
     'modules_contact_working' => 'სამუშაო საათები',
   ),
-  'about' => 
+  'about' =>
   array (
     'menu' => 'ჩვენს შესახებ',
   ),
-  'blog' => 
+  'blog' =>
   array (
     'menu' => 'სიახლეები',
     'create' => 'დამატება',
@@ -264,33 +264,63 @@ return array (
     'position' => 'პოზიცია',
     'about' => 'მოკლე ინფორმაცია',
   ),
-  'seo' => 
+    'brand' =>
+        array (
+            'menu' => 'ბრენდი',
+            'create' => 'დამატება',
+            'id' => 'ID ნომერი',
+            'title' => 'სათაური',
+            'status' => 'სტატუსი',
+            'update_status_successfully' => 'სტატუსი შეცვლილია',
+            'description' => 'აღწერა',
+            'date' => 'თარიღი',
+            'status_yes' => 'ჩართული',
+            'status_no' => 'გამორთული',
+            'save_text' => 'შენახვა',
+            'save_successfully' => 'შენახულია',
+            'edit' => 'რედაქტირება',
+            'main_tab' => 'მთავარი',
+            'galleries_tab' => 'გალერია',
+            'blog_directions' => 'მიმართულება',
+            'galleries' => 'ფოტო',
+            'add_element' => 'დამატება',
+            'close_fields' => 'გასვლა',
+            'save_fields' => 'შენახვა',
+            'meta_description' => 'მეტა აღწერა',
+            'meta_keyword' => 'მეტა ქივორდი',
+            'meta_title' => 'მეტა დასახელება',
+            'seo_tab' => 'SEO',
+            'name' => 'სახელი',
+            'position' => 'პოზიცია',
+            'about' => 'მოკლე ინფორმაცია',
+        ),
+  'seo' =>
   array (
     'menu' => 'SEO',
   ),
-  'auth' => 
+  'auth' =>
   array (
     'failed' => 'დაფიქსირდა შეცდომა',
     'login' => 'შესვლა',
     'login_title' => 'ავტორიზაცია',
   ),
-  'dashboard' => 
+  'dashboard' =>
   array (
     'index' => 'ადინისტრირების პორტალი',
   ),
-  'contact' => 
+  'contact' =>
   array (
     'menu' => 'კონტაქტი',
   ),
-  'social' => 
+  'social' =>
   array (
     'menu' => 'Social Media',
   ),
-  'beta-modal' => 
+  'beta-modal' =>
   array (
     'menu' => 'Beta',
   ),
-  'story' => 
+  'story' =>
   array (
     'modules_slider_images_action_button_title ka ' => 'Button title',
     'modules_slider_images_action_button_url' => 'Button URL',
@@ -366,55 +396,55 @@ return array (
     'modules_services_background_title' => 'ფონის სათაური',
     'modules_services_title' => 'სათაური',
   ),
-  'setting' => 
+  'setting' =>
   array (
     'menu' => 'SMTP მეილერი',
   ),
-  'training_session' => 
+  'training_session' =>
   array (
     'can_register_list' => 'დასწრების უფლება',
   ),
-  'company' => 
+  'company' =>
   array (
     'identify_id' => 'საიდენტიფიკაციო კოდი',
     'address' => 'კომპანიის მისამართი',
   ),
   'Image Upload Successfully' => 'ფოტო ატვირთულია',
-  'blogs' => 
+  'blogs' =>
   array (
     'menu' => 'სიახლეები',
   ),
-  'projects' => 
+  'projects' =>
   array (
     'menu' => 'პროექტები',
   ),
-  'teams' => 
+  'teams' =>
   array (
     'menu' => 'გუნდი',
   ),
-  'project' => 
+  'project' =>
   array (
     'menu' => 'პროექტები',
     'index' => 'პროექტები',
     'create' => 'შექმნა',
   ),
-  'team' => 
+  'team' =>
   array (
     'menu' => 'გუნდი',
   ),
   'Setting' => 'SMTP მეილერი',
-  'ADMIN' => 
+  'ADMIN' =>
   array (
-    'STORY' => 
+    'STORY' =>
     array (
       'MODULES_SERVICES_FIELDS' => 'asd',
     ),
   ),
-  'PAGE' => 
+  'PAGE' =>
   array (
     'MODULES_CONTENT_CONTENT' => 'კონტენტი',
   ),
-  'service' => 
+  'service' =>
   array (
     'menu' => 'სერვისები',
   ),

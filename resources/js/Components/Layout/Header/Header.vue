@@ -48,14 +48,14 @@
                         <img src="/landing_resources/img/logo/1.png" alt="" />
                     </a>
                     <div class="navbar">
-                        <a :href="locale_route(locales.current_locale,'/')">{{__('client.home_page')}}</a>
-                        <a :href="locale_route(locales.current_locale,'/product')">products & Partners</a>
-                        <inertia-link :href="locale_route(locales.current_locale,'/news')">news</inertia-link>
-                        <a :href="locale_route(locales.current_locale,'/about')">About us</a>
-                        <inertia-link :href="locale_route(locales.current_locale,'/contact')">contact</inertia-link>
+                        <a :href="locale_route(locales.current_locale,'/')">{{ __('home') }}</a>
+                        <a :href="locale_route(locales.current_locale,'/product')">{{ __('product') }}</a>
+                        <inertia-link :href="locale_route(locales.current_locale,'/news')">{{ __('news') }}</inertia-link>
+                        <a :href="locale_route(locales.current_locale,'/about')">{{ __('about') }}</a>
+                        <inertia-link :href="locale_route(locales.current_locale,'/contact')">{{ __('contact') }}</inertia-link>
                     </div>
                     <div class="languages">
-                        {{locales.current_locale}}
+                        {{locales.current_locale_to_show}}
                         <div class="drop">
                             <div v-for="(link,locale) in locales.available_locales">
                                 <inertia-link  :href="link" v-if="locale != locales.current_locale">{{ locale }}</inertia-link>
@@ -96,11 +96,12 @@ export default {
         },
         locales() {
             let i={
-                'current_locale': this.$page.props.locale,
-                '.available_locales': this.$page.props.available_locales
+                'current_locale': this.$page.props.current_locale,
+                'available_locales': this.$page.props.available_locales
             }
             return {
                 'current_locale': this.$page.props.locale,
+                'current_locale_to_show': this.$page.props.current_locale,
                 'available_locales': this.$page.props.available_locales
             };
         }

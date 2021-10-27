@@ -13,7 +13,7 @@
                         <p class="bold">{{ neww.title }}</p>
                         <p v-html="neww.description"></p>
                         <p class="bold">{{ neww.created_at }}</p>
-                        <inertia-link :href="neww.show_url">Learn More</inertia-link>
+                        <inertia-link :href="neww.show_url">{{ __('learn more') }}</inertia-link>
                     </div>
                 </div>
 

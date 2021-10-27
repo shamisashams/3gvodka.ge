@@ -4,10 +4,10 @@
 
             <div class="wrapper">
                 <section class="contact_page">
-                    <div class="title60">Contact Us</div>
+                    <div class="title60">{{ __('contact us') }}</div>
                     <div class="grid">
                         <div>
-                            <div class="title">Contact</div>
+                            <div class="title">{{ __('contact') }}</div>
                             <p v-if="contact"><img src="/landing_resources/img/icons/contact/1.svg" alt="" />
                                 {{ getValueByFields(contact.fields, 'phone') }}</p>
                             <p v-if="contact"><img src="/landing_resources/img/icons/contact/2.svg" alt="" />
@@ -17,14 +17,14 @@
                             </p>
                         </div>
                         <div>
-                            <div class="title">Working hours</div>
+                            <div class="title">{{ __('working hours') }}</div>
                             <p v-if="contact">
                                 <img src="/landing_resources/img/icons/contact/4.svg" alt="" />
                                 {{ getValueByFields(contact.fields, 'working') }}
                             </p>
                         </div>
                         <div>
-                            <div class="title">Write To Us</div>
+                            <div class="title">{{ __('write to us') }}</div>
                             <form @submit.prevent="submit">
                                 <div v-if="errors.name">{{ errors.name }}</div>
                                 <input type="text " placeholder="Name" v-model="form.name"/>
@@ -33,12 +33,12 @@
                                 <div v-if="errors.name">{{ errors.message }}</div>
                                 <textarea placeholder="Text Here" v-model="form.message"></textarea>
                                 <button class="title">
-                                    <img src="/landing_resources/img/icons/contact/5.svg" alt="" />Send Message
+                                    <img src="/landing_resources/img/icons/contact/5.svg" alt="" />{{ __('send message') }}
                                 </button>
                             </form>
                         </div>
                         <div>
-                            <div class="title">Find Us On A Map</div>
+                            <div class="title">{{ __('find us on a map') }}</div>
                             <div class="map">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11910.594738916752!2d44.767606787777794!3d41.72809916984403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sge!4v1633599411390!5m2!1sen!2sge"

@@ -14,7 +14,7 @@
 use App\Modules\Landing\Http\Controllers\Client\LandingPageController;
 use App\Modules\Landing\Http\Controllers\Client\PreviewPageController;
 use Illuminate\Support\Facades\Route;
-    Route::redirect('','admin')->name('home.index');
+Route::redirect('','admin')->name('home.index');
 
 Route::get('language/{language}', function ($language) {
     $fullUrlWithoutDomain = Str::replaceFirst(config('app.url'),'',url()->previous());

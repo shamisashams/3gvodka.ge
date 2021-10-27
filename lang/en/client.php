@@ -1,5 +1,9 @@
 <?php
 
 return array (
-    'Our Services' => 'დფგდფგ',
+  'product' => 'products & partners',
+  'news' => 'news',
+  'about' => 'about',
+  'contact' => 'contact',
+  'Working hours' => 'ff',
 );

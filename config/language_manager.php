@@ -14,10 +14,14 @@ return [
      * All locales.
      */
     'locales'   => [
-        'ka',
+        'ge',
         'en',
-        'ru',
-        'fr'
+        'ru'
     ],
-    'default_locale'    => 'ka'
+    'default_locale'    => 'ge',
+    'locale_titles' =>[
+        'ge'=>'GEO',
+        'en'=>'ENG',
+        'ru'=>'RUS',
+    ]
 ];

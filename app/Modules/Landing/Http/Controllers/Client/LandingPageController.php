@@ -63,14 +63,21 @@ class LandingPageController extends Controller
 
     public function home(Request $request)
     {
-        return view("homePage");
+        if (app()->getLocale()=="ge"){
+            return view("homePage_ge");
+
+        }elseif (app()->getLocale()=="en"){
+            return view("homePage_en");
+        }elseif (app()->getLocale()=="ru"){
+            return view("homePage_ru");
+        }
     }
     public function product(Request $request):Response
     {
 
         $page = Page::where('name', 'product')->first();
         $pageData = $page ? (new PageMetaInfoResource($page->meta))->toArray($request) : [];
-
+dd($page);
 
         $brands = (new BrandData())->getBrands();
 

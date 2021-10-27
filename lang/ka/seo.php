@@ -1,17 +1,17 @@
 <?php
 
 return array (
-  'blog' => 
+  'blog' =>
   array (
     'title' => 'ბლოგი მეტა',
     'description' => 'ბლოგის აღწერა',
   ),
-  'project' => 
+  'project' =>
   array (
     'title' => 'პროექტის მეტა ტაგი',
     'description' => 'პროექტის აღწერა',
   ),
-  'team' => 
+  'team' =>
   array (
     'title' => 'გუნდის მეტა ტაგი',
     'description' => 'გუნდის მეტა აღწერა',

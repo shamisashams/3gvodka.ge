@@ -92,10 +92,10 @@ return [
     |
     */
 
-    'locale' => 'ka',
+    'locale' => 'ge',
 
     'locales' => [
-        'ka',
+        'ge',
         'en',
         'ru'
     ],
