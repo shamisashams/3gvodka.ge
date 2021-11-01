@@ -36,7 +36,7 @@ class BrandData
     public function getBrands(): array
     {
         $brands = $this->brands::with(['translations', 'images'])
-            ->active()->orderBy('created_at', 'DESC')->get();
+            ->active()->orderBy('created_at', 'ASC')->get();
 
         $brandsData = [];
         foreach ($brands->getIterator() as $brand) {
