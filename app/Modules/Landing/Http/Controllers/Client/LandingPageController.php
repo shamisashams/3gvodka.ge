@@ -77,7 +77,6 @@ class LandingPageController extends Controller
 
         $page = Page::where('name', 'product')->first();
         $pageData = $page ? (new PageMetaInfoResource($page->meta))->toArray($request) : [];
-dd($page);
 
         $brands = (new BrandData())->getBrands();
 
