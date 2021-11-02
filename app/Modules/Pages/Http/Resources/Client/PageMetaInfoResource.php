@@ -103,9 +103,9 @@ class PageMetaInfoResource extends JsonResource
                             if (empty($value) && !empty($inputField['value'])) {
                                 $value = $inputField['value'];
                             }
-                            if (empty($value) && !isset($inputField['value']) && isset($inputField['file'])) {
-                                $value = $inputField['file']['full_src'];
-                            }
+//                            if (empty($value) && !isset($inputField['value']) && isset($inputField['file'])) {
+//                                $value = $inputField['file']['full_src'];
+//                            }
 
                             if (!is_array($inputField)) {
                                 continue;
