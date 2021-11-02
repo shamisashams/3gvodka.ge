@@ -21,7 +21,7 @@ return [
     | Locale separator
     |--------------------------------------------------------------------------
     |
-    | This is a string used to glue the language and the country when defining
+    | This is a string used to glue the language and the gicountry when defining
     | the available locales. Example: if set to '-', then the locale for
     | colombian spanish will be saved as 'es-CO' into the database.
     |
