@@ -8,33 +8,32 @@ const audio = document.querySelector("audio");
 
 // main page
 mainMenuBtn.addEventListener("click", () => {
-  blurBg.classList.toggle("show");
-  navigations.classList.toggle("show");
+    blurBg.classList.toggle("show");
+    navigations.classList.toggle("show");
 });
 blurBg.addEventListener("click", () => {
-  blurBg.classList.remove("show");
-  navigations.classList.remove("show");
+    blurBg.classList.remove("show");
+    navigations.classList.remove("show");
 });
 closeNav.addEventListener("click", () => {
-  blurBg.classList.remove("show");
-  navigations.classList.remove("show");
-});
-
-window.addEventListener("DOMContentLoaded", () => {
-  audio.volume = 0.2;
-  audio.play();
-  audio.muted = true;
-  audio.play();
-  audio.muted = false;
+    blurBg.classList.remove("show");
+    navigations.classList.remove("show");
 });
 
 playMusic.addEventListener("click", () => {
-  audio.play();
-  playMusic.classList.remove("active");
-  pauseMusic.classList.add("active");
+    audio.play();
+    playMusic.classList.remove("active");
+    pauseMusic.classList.add("active");
 });
 pauseMusic.addEventListener("click", () => {
-  audio.pause();
-  playMusic.classList.add("active");
-  pauseMusic.classList.remove("active");
+    audio.pause();
+    playMusic.classList.add("active");
+    pauseMusic.classList.remove("active");
+});
+
+window.addEventListener("load", function () {
+    // setTimeout(function () {
+    document.querySelector(".ctn-preloader").classList.add("loaded");
+
+    // }, 3000);
 });
