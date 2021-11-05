@@ -32,10 +32,10 @@
                 <p v-if="brand_text" v-html="brand_text.fields.description.value">
                 </p>
                 <div class="brand_grid">
-                    <inertia-link :href="brand.show_url" class="brand_item" v-for="brand in brands">
+                    <a :href="brand.show_url" class="brand_item" v-for="brand in brands">
                         <LazyImage :src="brand.main_image" :alt="brand.title" />
                         <div>{{brand.title}}</div>
-                    </inertia-link>
+                    </a>
 
                 </div>
             </section>

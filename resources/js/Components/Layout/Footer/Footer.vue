@@ -41,9 +41,9 @@
             <div class="col col_2">
                 <a :href="locale_route(this.$page.props.locale,'/')" class="title">{{ __('home') }}</a>
                 <a :href="locale_route(this.$page.props.locale,'/product')" class="title">{{ __('product') }}</a>
-                <inertia-link :href="locale_route(this.$page.props.locale,'/news')" class="title">{{ __('news') }}</inertia-link>
+                <a :href="locale_route(this.$page.props.locale,'/news')" class="title">{{ __('news') }}</a>
                 <a :href="locale_route(this.$page.props.locale,'/about')" class="title">{{ __('about') }}</a>
-                <inertia-link :href="locale_route(this.$page.props.locale,'/contact')" class="title">{{ __('contact') }}</inertia-link>
+                <a :href="locale_route(this.$page.props.locale,'/contact')" class="title">{{ __('contact') }}</a>
             </div>
             <form class="col col_3 form" @submit.prevent="submit">
                 <input type="text " placeholder="Name" v-model="form.name"/>
