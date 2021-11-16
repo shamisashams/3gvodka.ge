@@ -44,7 +44,7 @@
             </div>
             <div class="bottom">
                 <div class="wrapper flex">
-                    <a href="main.html" class="logo">
+                    <a :href="locale_route(locales.current_locale,'/')" class="logo">
                         <img src="/landing_resources/img/logo/1.png" alt="" />
                     </a>
                     <div class="navbar">
