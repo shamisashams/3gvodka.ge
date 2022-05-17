@@ -1,14 +1,14 @@
 @font-face {
   font-family: "bungee";
-  src: url(fonts/Bungee-Regular.ttf);
+  src: url(/landing_resources/fonts/Bungee-Regular.ttf);
 }
 @font-face {
   font-family: "nunito";
-  src: url(fonts/NunitoSans-Bold.ttf);
+  src: url(/landing_resources/fonts/NunitoSans-Bold.ttf);
 }
 @font-face {
   font-family: "nunito_bold";
-  src: url(fonts/NunitoSans-ExtraBold.ttf);
+  src: url(/landing_resources/fonts/NunitoSans-ExtraBold.ttf);
 }
 *,
 *::after,
@@ -99,7 +99,7 @@ body {
 
 .main_body {
   position: relative;
-  background: url(img/main/bg.png);
+  background: url(/landing_resources/img/main/bg.png);
 }
 .main_body svg {
   position: absolute;
@@ -228,8 +228,8 @@ body {
 }
 /********** SCROLLING TEXT ************/
 
-/* 
-** ALL CREDIT GOES TO 
+/*
+** ALL CREDIT GOES TO
 ** Craig Buckler
 ** http://www.sitepoint.com/css3-starwars-scrolling-text/
 **
@@ -409,7 +409,7 @@ html {
     display: none;
   }
   .main_body {
-    background: url(img/main/city.png) no-repeat;
+    background: url(/landing_resources/img/main/city.png) no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;

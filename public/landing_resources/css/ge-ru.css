@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "bebas";
+    src: url(/landing_resources/fonts/bebas-neue-regular.otf);
+}
+
+*,
+*::after,
+*::before {
+    font-family: "bebas";
+}
+
+body {
+    font-family: "bebas";
+}

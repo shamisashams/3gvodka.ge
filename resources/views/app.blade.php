@@ -23,6 +23,11 @@
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
     <link rel="stylesheet" href="{{asset('landing_resources/css/style.css')}}" />
+    @if(app()->getLocale()=="en")
+        <link rel="stylesheet" href="{{asset('landing_resources/css/en.css')}}" />
+    @else
+        <link rel="stylesheet" href="{{asset('landing_resources/css/ge-ru.css')}}" />
+    @endif
     <script src="{{asset('landing_resources/js/jquery-1.11.0.min.js')}}"></script>
     <script src="{{asset('landing_resources/js/jquery-migrate-1.2.1.min.js')}}"></script>
     <script src="{{asset('landing_resources/js/slick.min.js')}}"></script>

@@ -1,14 +1,14 @@
 <template>
     <div class="paginations flex center margin_bottom">
         <template v-for="(link, i) in links" :key="i">
-            <inertia-link :href="link.url"
+            <a :href="link.url"
                 class="page_number medium flex center main_blue"
                 v-bind:class="{
                            'active': link.active,
                        }"
                 v-html="link.label">
 
-            </inertia-link>
+            </a>
         </template>
     </div>
 </template>

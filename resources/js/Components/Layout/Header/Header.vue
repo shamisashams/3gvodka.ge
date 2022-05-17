@@ -44,21 +44,21 @@
             </div>
             <div class="bottom">
                 <div class="wrapper flex">
-                    <a href="main.html" class="logo">
+                    <a :href="locale_route(locales.current_locale,'/')" class="logo">
                         <img src="/landing_resources/img/logo/1.png" alt="" />
                     </a>
                     <div class="navbar">
                         <a :href="locale_route(locales.current_locale,'/')">{{ __('home') }}</a>
                         <a :href="locale_route(locales.current_locale,'/product')">{{ __('product') }}</a>
-                        <inertia-link :href="locale_route(locales.current_locale,'/news')">{{ __('news') }}</inertia-link>
+                        <a :href="locale_route(locales.current_locale,'/news')">{{ __('news') }}</a>
                         <a :href="locale_route(locales.current_locale,'/about')">{{ __('about') }}</a>
-                        <inertia-link :href="locale_route(locales.current_locale,'/contact')">{{ __('contact') }}</inertia-link>
+                        <a :href="locale_route(locales.current_locale,'/contact')">{{ __('contact') }}</a>
                     </div>
                     <div class="languages">
                         {{locales.current_locale_to_show}}
                         <div class="drop">
                             <div v-for="(link,locale) in locales.available_locales">
-                                <inertia-link  :href="link" v-if="locale != locales.current_locale">{{ locale }}</inertia-link>
+                                <a  :href="link" v-if="locale != locales.current_locale">{{ locale }}</a>
                             </div>
                         </div>
                     </div>
@@ -67,7 +67,7 @@
         </div>
         <div class="mobile">
             <div class="wrapper flex">
-                <a href="main.html" class="logo">
+                <a :href="locale_route(locales.current_locale,'/product')" class="logo">
                     <img src="/landing_resources/img/logo/1.png" alt="" />
                 </a>
                 <button id="menu_btn"></button>
