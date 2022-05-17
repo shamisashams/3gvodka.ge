@@ -370,8 +370,11 @@ img {
 .brands .brand_grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 50px 16px;
+    grid-gap: 16px !important;
     margin-bottom: 90px;
+}
+.brands .brand_grid .brand_item img {
+    height: 56%;
 }
 
 /* about us */
