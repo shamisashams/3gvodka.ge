@@ -148,7 +148,7 @@
 
     <rect style="filter:blur(2px)" id="Rectangle_220" data-name="Rectangle 220" width="1920" height="311" fill="url(#linear-gradient)"/>
 
-    <a href="https://3gvodka.ge/en/brand/8-vodka-khlebnaia-osobaia" class="group">
+    <a href="https://3gvodka.ge/ge/brand/8-vodka-khlebnaia-osobaia" class="group">
       <g id="Component_7_70" data-name="Component 7 – 70" transform="translate(354.312 383)">
         <circle  id="Ellipse_160" data-name="Ellipse 160" cx="6" cy="6" r="9" transform="translate(286.688 20)" fill="#fff"/>
         <g class="circle" id="Ellipse_162" data-name="Ellipse 162" transform="translate(275.688 9)" fill="none" stroke="#fff" stroke-width="1">
@@ -165,7 +165,7 @@
         </g>
       </g>
     </a>
-    <a href="https://3gvodka.ge/en/brand/5-rybnyi-standart" class="group">
+    <a href="https://3gvodka.ge/ge/brand/5-rybnyi-standart" class="group">
       <g id="Component_7_71" data-name="Component 7 – 71" transform="translate(496.702 514.217)">
         <circle id="Ellipse_160-2" data-name="Ellipse 160" cx="6" cy="6" r="9" transform="translate(20 200.783)" fill="#fff"/>
         <g id="Ellipse_161-2" data-name="Ellipse 161" transform="translate(0 180.783)" fill="none" stroke="#fff" stroke-width="1" opacity="0">
@@ -186,7 +186,7 @@
         <rect id="Ribn_Standart_-1_New_Logo" width="146.474" height="101.538" transform="translate(81.531 80.245)" fill="url(#pattern-2)"/>
       </g>
     </a>
-    <a href="https://3gvodka.ge/en/brand/1-savyak" class="group">
+    <a href="https://3gvodka.ge/ge/brand/1-savyak" class="group">
       <g id="Component_7_72" data-name="Component 7 – 72" transform="translate(263.702 600.578)">
         <circle id="Ellipse_160-3" data-name="Ellipse 160" cx="6" cy="6" r="9" transform="translate(20 209.783)" fill="#fff"/>
         <g id="Ellipse_161-3" data-name="Ellipse 161" transform="translate(0 189.783)" fill="none" stroke="#fff" stroke-width="1" opacity="0">
@@ -208,7 +208,7 @@
       </g>
     </a>
 
-    <a href="https://3gvodka.ge/en/brand/3-mero" class="group">
+    <a href="https://3gvodka.ge/ge/brand/3-mero" class="group">
       <g id="Component_7_73" data-name="Component 7 – 73" transform="translate(1360.37 285)">
           <circle id="Ellipse_160-4" data-name="Ellipse 160" cx="6" cy="6" r="9" transform="translate(480.63 20)" fill="#fff"/>
           <g id="Ellipse_161-4" data-name="Ellipse 161" transform="translate(460.63)" fill="none" stroke="#fff" stroke-width="1" opacity="0">
@@ -229,7 +229,7 @@
           </g>
         </g>
     </a>
-    <a href="https://3gvodka.ge/en/brand/11-vsk-didgori" class="group">
+    <a href="https://3gvodka.ge/ge/brand/11-vsk-didgori" class="group">
       <g id="Component_7_74" data-name="Component 7 – 74" transform="translate(662.682 420)">
           <circle id="Ellipse_160-5" data-name="Ellipse 160" cx="6" cy="6" r="9" transform="translate(132.318 20)" fill="#fff"/>
           <g id="Ellipse_161-5" data-name="Ellipse 161" transform="translate(112.318)" fill="none" stroke="#fff" stroke-width="1" opacity="0">
@@ -251,7 +251,7 @@
           </g>
         </g>
     </a>
-    <a href="https://3gvodka.ge/en/brand/16-shnapsi" class="group">
+    <a href="https://3gvodka.ge/ge/brand/16-shnapsi" class="group">
       <g id="Component_7_75" data-name="Component 7 – 75" transform="translate(753.682 455.657)">
         <circle id="Ellipse_160-6" data-name="Ellipse 160" cx="6" cy="6" r="9" transform="translate(132.318 20)" fill="#fff"/>
         <g id="Ellipse_161-6" data-name="Ellipse 161" transform="translate(112.318)" fill="none" stroke="#fff" stroke-width="1" opacity="0">
@@ -276,7 +276,7 @@
         </g>
       </g>
     </a>
-    <a href="https://3gvodka.ge/en/brand/6-naliboki" class="group">
+    <a href="https://3gvodka.ge/ge/brand/6-naliboki" class="group">
       <g id="Component_7_76" data-name="Component 7 – 76" transform="translate(1013.63 455.657)">
           <circle id="Ellipse_160-7" data-name="Ellipse 160" cx="6" cy="6" r="9" transform="translate(132.318 20)" fill="#fff"/>
           <g id="Ellipse_161-7" data-name="Ellipse 161" transform="translate(112.318)" fill="none" stroke="#fff" stroke-width="1" opacity="0">
@@ -298,7 +298,7 @@
           </g>
         </g>
     </a>
-    <a href="https://3gvodka.ge/en/brand/10-runa" class="group">
+    <a href="https://3gvodka.ge/ge/brand/10-runa" class="group">
       <g id="Component_7_77" data-name="Component 7 – 77" transform="translate(1149.266 393)">
         <circle id="Ellipse_160-8" data-name="Ellipse 160" cx="6" cy="6" r="9" transform="translate(155.734 20)" fill="#fff"/>
         <g id="Ellipse_161-8" data-name="Ellipse 161" transform="translate(135.734)" fill="none" stroke="#fff" stroke-width="1" opacity="0">
@@ -319,7 +319,7 @@
         <rect id="e9a353d6ef078f6c-17" width="70" height="58" transform="translate(129.735 109)" fill="url(#pattern-7)"/>
       </g>
     </a>
-    <a href="https://3gvodka.ge/en/brand/15-santa-luchia" class="group">
+    <a href="https://3gvodka.ge/ge/brand/15-santa-luchia" class="group">
       <g id="Component_7_79" data-name="Component 7 – 79" transform="translate(127.702 0.217)">
             <circle id="Ellipse_160-9" data-name="Ellipse 160" cx="6" cy="6" r="9" transform="translate(20 209.783)" fill="#fff"/>
             <g id="Ellipse_161-9" data-name="Ellipse 161" transform="translate(0 189.783)" fill="none" stroke="#fff" stroke-width="1" opacity="0">
@@ -343,7 +343,7 @@
     <path id="Path_1017" data-name="Path 1017" d="M-7750.017-9558l447.979-519.813H-7270L-6547.14-9558Z" transform="translate(8245.008 10638)" fill="#11163c" opacity="0.69"/>
 
 
-    <a href="https://3gvodka.ge/en/brand/12-cremossa" class="group">
+    <a href="https://3gvodka.ge/ge/brand/12-cremossa" class="group">
       <g id="Component_7_80" data-name="Component 7 – 80" transform="translate(1477.309 -45.132)">
             <circle id="Ellipse_160-10" data-name="Ellipse 160" cx="6" cy="6" r="9" transform="translate(264.799 197.783)" fill="#fff"/>
             <g id="Ellipse_161-10" data-name="Ellipse 161" transform="translate(244.799 177.783)" fill="none" stroke="#fff" stroke-width="1" opacity="0">
@@ -364,7 +364,7 @@
             <rect id="e9a353d6ef078f6c-8" width="87" height="87" transform="translate(94.691 86.132)" fill="url(#pattern-9)"/>
           </g>
     </a>
-    <a href="https://3gvodka.ge/en/brand/7-bebo-genatsvalos" class="group">
+    <a href="https://3gvodka.ge/ge/brand/7-bebo-genatsvalos" class="group">
       <g id="Component_7_81" data-name="Component 7 – 81" transform="translate(1464.177 180.512)">
           <circle id="Ellipse_160-11" data-name="Ellipse 160" cx="6" cy="6" r="9" transform="translate(264.799 197.783)" fill="#fff"/>
           <g id="Ellipse_161-11" data-name="Ellipse 161" transform="translate(244.799 177.783)" fill="none" stroke="#fff" stroke-width="1" opacity="0">
@@ -423,7 +423,7 @@
       </g>
 
     </g>
-    <a href="https://3gvodka.ge/en/brand/18-baghdaduri" class="group">
+    <a href="https://3gvodka.ge/ge/brand/18-baghdaduri" class="group">
       <g id="Component_7_82" data-name="Component 7 – 82" transform="translate(1095.903 8.868)">
         <circle id="Ellipse_160-12" data-name="Ellipse 160" cx="6" cy="6" r="9" transform="translate(264.799 197.783)" fill="#fff"/>
         <g id="Ellipse_161-12" data-name="Ellipse 161" transform="translate(244.799 177.783)" fill="none" stroke="#fff" stroke-width="1" opacity="0">
@@ -442,7 +442,7 @@
         <rect id="e9a353d6ef078f6c-9" width="70" height="70" transform="translate(133.097 90.126)" fill="url(#pattern-12)"/>
       </g>
     </a>
-    <a href="https://3gvodka.ge/en/brand/17-mukhranis-marani" class="group">
+    <a href="https://3gvodka.ge/ge/brand/17-mukhranis-marani" class="group">
       <g id="Component_7_83" data-name="Component 7 – 83" transform="translate(1174.903 96.868)">
             <circle id="Ellipse_160-13" data-name="Ellipse 160" cx="6" cy="6" r="9" transform="translate(264.799 197.783)" fill="#fff"/>
             <g id="Ellipse_161-13" data-name="Ellipse 161" transform="translate(244.799 177.783)" fill="none" stroke="#fff" stroke-width="1" opacity="0">
@@ -463,7 +463,7 @@
             </g>
           </g>
     </a>
-    <a href="https://3gvodka.ge/en/brand/19-alkoni" class="group">
+    <a href="https://3gvodka.ge/ge/brand/19-alkoni" class="group">
       <g id="Component_7_84" data-name="Component 7 – 84" transform="translate(458 211)">
           <circle id="Ellipse_160-14" data-name="Ellipse 160" cx="6" cy="6" r="9" transform="translate(12 194.389)" fill="#fff"/>
           <g id="Ellipse_162-14" data-name="Ellipse 162" transform="translate(0 182.389)" fill="none" stroke="#fff" stroke-width="1">
@@ -480,7 +480,7 @@
           <rect id="лого_алькони_png" data-name="лого алькони png" width="72" height="38" transform="translate(93 113.389)" fill="url(#pattern-13)"/>
         </g>
     </a>
-    <a href="https://3gvodka.ge/en/brand/14-kukhmasteri" class="group">
+    <a href="https://3gvodka.ge/ge/brand/14-kukhmasteri" class="group">
       <g id="Component_7_107" data-name="Component 7 – 107" transform="translate(707.105 14.265)">
             <circle id="Ellipse_160-15" data-name="Ellipse 160" cx="6" cy="6" r="9" transform="translate(12 167.123)" fill="#fff"/>
             <g id="Ellipse_162-15" data-name="Ellipse 162" transform="translate(0 155.123)" fill="none" stroke="#fff" stroke-width="1">
@@ -497,7 +497,7 @@
             <rect id="logo2-300" width="95.837" height="50.742" transform="translate(57.097 81.123)" fill="url(#pattern-14)"/>
           </g>
     </a>
-    <a href="https://3gvodka.ge/en/brand/20-tomatela" class="group">
+    <a href="https://3gvodka.ge/ge/brand/20-tomatela" class="group">
       <g id="Component_7_85" data-name="Component 7 – 85" transform="translate(300.824 487.219)">
             <circle id="Ellipse_160-16" data-name="Ellipse 160" cx="6" cy="6" r="9" transform="translate(12 195.389)" fill="#fff"/>
             <g id="Ellipse_162-16" data-name="Ellipse 162" transform="translate(0 183.389)" fill="none" stroke="#fff" stroke-width="1">
@@ -514,7 +514,7 @@
             <rect id="Tomatela_Logo" data-name="Tomatela Logo" width="72" height="38" transform="translate(93 114.389)" fill="url(#pattern-15)"/>
           </g>
     </a>
-    <a href="https://3gvodka.ge/en/brand/4-raduga" class="group">
+    <a href="https://3gvodka.ge/ge/brand/4-raduga" class="group">
       <g id="Component_7_86" data-name="Component 7 – 86" transform="translate(1286.335 352)">
             <circle id="Ellipse_160-17" data-name="Ellipse 160" cx="6" cy="6" r="9" transform="translate(263.665 20)" fill="#fff"/>
             <g id="Ellipse_161-14" data-name="Ellipse 161" transform="translate(243.665)" fill="none" stroke="#fff" stroke-width="1" opacity="0">
@@ -535,7 +535,7 @@
             </g>
           </g>
     </a>
-    <a href="https://3gvodka.ge/en/brand/9-3g" class="group">
+    <a href="https://3gvodka.ge/ge/brand/9-3g" class="group">
 
       <g id="Component_7_87" data-name="Component 7 – 87" transform="translate(1355.726 422.512)">
         <circle id="Ellipse_160-18" data-name="Ellipse 160" cx="6" cy="6" r="9" transform="translate(264.799 197.783)" fill="#fff"/>
@@ -557,7 +557,7 @@
         </g>
       </g>
     </a>
-    <a href="https://3gvodka.ge/en/brand/13-helio" class="group">
+    <a href="https://3gvodka.ge/ge/brand/13-helio" class="group">
       <g id="Component_7_78" data-name="Component 7 – 78" transform="translate(452.702 56.217)">
             <circle id="Ellipse_160-19" data-name="Ellipse 160" cx="6" cy="6" r="9" transform="translate(20 200.783)" fill="#fff"/>
             <g id="Ellipse_161-16" data-name="Ellipse 161" transform="translate(0 180.783)" fill="none" stroke="#fff" stroke-width="1" opacity="0">
@@ -578,7 +578,7 @@
             </g>
           </g>
     </a>
-    <a href="https://3gvodka.ge/en/brand/2-croco" class="group">
+    <a href="https://3gvodka.ge/ge/brand/2-croco" class="group">
       <g id="Component_7_69" data-name="Component 7 – 69" transform="translate(-260.355 351)">
         <circle id="Ellipse_160-20" data-name="Ellipse 160" cx="6" cy="6" r="9" transform="translate(489.355 20)" fill="#fff"/>
         <g id="Ellipse_161-17" data-name="Ellipse 161" transform="translate(469.355)" fill="none" stroke="#fff" stroke-width="1" opacity="0">
