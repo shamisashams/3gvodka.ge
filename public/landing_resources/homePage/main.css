@@ -68,17 +68,22 @@ body {
 }
 .group image,
 .group text,
-.group polygon,
+.group path,
 .group use,
-.group g {
+.group rect {
+    visibility: hidden;
     opacity: 0;
-    transition: 0.7s;
+    transition: 0.5s;
+}
+.group.logo path {
+    visibility: visible;
 }
 .group:hover image,
 .group:hover text,
-.group:hover polygon,
+.group:hover path,
 .group:hover use,
-.group:hover g {
+.group:hover rect {
+    visibility: visible;
     opacity: 1;
 }
 .group circle,
