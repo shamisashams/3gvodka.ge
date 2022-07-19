@@ -63,6 +63,7 @@ export default {
 
     methods: {
         productUrl: function (product){
+            console.log(product)
             if (product.title){
                 return '/product/'+product.id+'-'+product.title.split(" ").join("-");
             }
