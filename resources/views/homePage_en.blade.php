@@ -497,7 +497,7 @@
             <rect id="logo2-300" width="95.837" height="50.742" transform="translate(57.097 81.123)" fill="url(#pattern-14)"/>
           </g>
     </a>
-    <a href="/en/brand/20-tomatela" class="group">
+    <a href="https://3gvodka.ge/en/brand/20-tomatela" class="group">
       <g id="Component_7_85" data-name="Component 7 – 85" transform="translate(300.824 487.219)">
             <circle id="Ellipse_160-16" data-name="Ellipse 160" cx="6" cy="6" r="9" transform="translate(12 195.389)" fill="#fff"/>
             <g id="Ellipse_162-16" data-name="Ellipse 162" transform="translate(0 183.389)" fill="none" stroke="#fff" stroke-width="1">
