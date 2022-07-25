@@ -105,6 +105,7 @@ class LandingPageController extends Controller
             'translations',
             'images',
         ])->with(['products' => function($query){
+            $query->with('translation');
             $query->with("images")->where('status', 1);
         }])
             ->active()
