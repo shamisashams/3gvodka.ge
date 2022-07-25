@@ -15,7 +15,7 @@
   </head>
   <body class="main_body">
   <section>
-		<div id="preloader">
+		<!-- <div id="preloader">
 			<div id="ctn-preloader" class="ctn-preloader">
 				<div class="animation-preloader">
 					<div class="spinner"></div>
@@ -52,7 +52,7 @@
 				<div class="loader-section section-left"></div>
 				<div class="loader-section section-right"></div>
 			</div>
-		</div>
+		</div> -->
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080">
   <defs>
     <linearGradient  id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
@@ -438,7 +438,7 @@
           <text id="See_more-12" data-name="See more" transform="translate(15 5)" fill="#fff" font-size="10" font-family="NunitoSans-Bold, Nunito Sans" font-weight="700"><tspan x="-21.455" y="0">See More</tspan></text>
           <path id="Icon_ionic-ios-arrow-forward-12" data-name="Icon ionic-ios-arrow-forward" d="M14.589,10.379,11.422,7.215a.6.6,0,0,1,0-.845.6.6,0,0,1,.847,0l3.588,3.585a.6.6,0,0,1,.017.825l-3.6,3.61a.6.6,0,1,1-.847-.845Z" transform="translate(31.036 -8.381)" fill="#fff"/>
         </g>
-        <rect id="e9a353d6ef078f6c-9" width="70" height="70" transform="translate(133.097 90.126)" fill="url(#pattern-12)"/>
+        <rect id="e9a353d6ef078f6c-9" width="125" height="111" transform="translate(101.097 70.126)" fill="url(#pattern-12)"></rect>
       </g>
     </a>
     <a href="https://3gvodka.ge/en/brand/17-mukhranis-marani" class="group">
@@ -458,7 +458,7 @@
                 <text id="See_more-13" data-name="See more" transform="translate(15 5)" fill="#fff" font-size="10" font-family="NunitoSans-Bold, Nunito Sans" font-weight="700"><tspan x="-21.455" y="0">See More</tspan></text>
                 <path id="Icon_ionic-ios-arrow-forward-13" data-name="Icon ionic-ios-arrow-forward" d="M14.589,10.379,11.422,7.215a.6.6,0,0,1,0-.845.6.6,0,0,1,.847,0l3.588,3.585a.6.6,0,0,1,.017.825l-3.6,3.61a.6.6,0,1,1-.847-.845Z" transform="translate(31.036 -8.381)" fill="#fff"/>
               </g>
-              <image id="e9a353d6ef078f6c-10" width="54.205" height="54.112" transform="translate(-9885.559 7594.103)" xlink:href="/landing_resources/img/brands/9.png"/>
+              <image id="e9a353d6ef078f6c-10" width="101.205" height="101.112" transform="translate(-9910.559 7560.103)" xlink:href="/landing_resources/img/brands/9.png"></image>
             </g>
           </g>
     </a>   
@@ -476,7 +476,7 @@
               <path id="Icon_ionic-ios-arrow-forward-14" data-name="Icon ionic-ios-arrow-forward" d="M14.589,10.379,11.422,7.215a.6.6,0,0,1,0-.845.6.6,0,0,1,.847,0l3.588,3.585a.6.6,0,0,1,.017.825l-3.6,3.61a.6.6,0,1,1-.847-.845Z" transform="translate(31.036 -8.381)" fill="#fff"/>
             </g>
           </g>
-          <rect id="лого_алькони_png" data-name="лого алькони png" width="72" height="38" transform="translate(93 113.389)" fill="url(#pattern-13)"/>
+          <rect id="лого_алькони_png" data-name="лого алькони png" width="111" height="63" transform="translate(68 91.389)" fill="url(#pattern-13)"></rect>
         </g>
     </a>   
     <a href="https://3gvodka.ge/en/brand/14-kukhmasteri" class="group">
@@ -510,7 +510,7 @@
                 <path id="Icon_ionic-ios-arrow-forward-16" data-name="Icon ionic-ios-arrow-forward" d="M14.589,10.379,11.422,7.215a.6.6,0,0,1,0-.845.6.6,0,0,1,.847,0l3.588,3.585a.6.6,0,0,1,.017.825l-3.6,3.61a.6.6,0,1,1-.847-.845Z" transform="translate(31.036 -8.381)" fill="#fff"/>
               </g>
             </g>
-            <rect id="Tomatela_Logo" data-name="Tomatela Logo" width="72" height="38" transform="translate(93 114.389)" fill="url(#pattern-15)"/>
+            <rect id="Tomatela_Logo" data-name="Tomatela Logo" width="125" height="80" transform="translate(69 82.389)" fill="url(#pattern-15)"></rect>
           </g>
     </a>   
     <a href="https://3gvodka.ge/en/brand/4-raduga" class="group">
