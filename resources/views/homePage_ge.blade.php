@@ -87,7 +87,7 @@
       <image width="1101" height="351" xlink:href="/landing_resources/img/brands/2.png"/>
     </pattern>
     <pattern id="pattern-7" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 1751 1748">
-      <image width="1751" height="1748" xlink:href="/landing_resources/img/brands/16.png"/>
+      <image width="1751" height="1748" xlink:href="/landing_resources/img/brands/22.png"/>
     </pattern>
     <pattern id="pattern-8" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 1751 1748">
       <image width="1751" height="1748" xlink:href="/landing_resources/img/brands/6.png"/>
@@ -265,7 +265,7 @@
         <path style="filter:blur(2px)" id="Path_1015-4" data-name="Path 1015" d="M121.674-3.909h16.007L271.361,264.8H-9.318Z" transform="translate(9.318 51)" fill="url(#linear-gradient-2)"/>
         <g id="Group_556" data-name="Group 556" transform="translate(17.139 13)">
           <g id="Group_498" data-name="Group 498" transform="translate(9972.121 -7499.866)">
-            <image id="e9a353d6ef078f6c-11" width="60.612" height="60.527" transform="translate(-9880.941 7573.445)" xlink:href="/landing_resources/img/brands/10.png"/>
+            <image id="e9a353d6ef078f6c-11" width="60.612" height="60.527" transform="translate(-9880.941 7573.445)" xlink:href="/landing_resources/img/brands/21.png"/>
           </g>
           <g id="Group_556-2" data-name="Group 556" transform="translate(9970.815 -7523.866)">
             <g id="Group_498-2" data-name="Group 498" transform="translate(-9864.636 7664.866)">
@@ -846,7 +846,7 @@
       </div>
       <div class="right">
         <a href="https://3gvodka.ge/en/brand/16" class="brands">
-          <img src="/landing_resources/img/brands/10.png" alt="" />
+          <img src="/landing_resources/img/brands/21.png" alt="" />
         </a>
         <a href="https://3gvodka.ge/en/brand/13" class="brands">
           <img src="/landing_resources/img/brands/11.png" alt="" />
@@ -864,7 +864,7 @@
           <img src="/landing_resources/img/brands/15.png" alt="" />
         </a>
         <a href="https://3gvodka.ge/en/brand/10" class="brands">
-          <img src="/landing_resources/img/brands/16.png" alt="" />
+          <img src="/landing_resources/img/brands/22.png" alt="" />
         </a>
         <a href="https://3gvodka.ge/en/brand/17" class="brands">
           <img src="/landing_resources/img/brands/17.png" alt="" />
