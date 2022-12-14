@@ -16,42 +16,15 @@
   <body class="main_body">
   <section>
 		<!-- <div id="preloader">
-			<div id="ctn-preloader" class="ctn-preloader">
-				<div class="animation-preloader">
-					<div class="spinner"></div>
-					<div class="txt-loading">
-						<span data-text-preloader="3" class="letters-loading">
-							3
-						</span>
+      <div class="loaderRing">
+        <div class="container">
+          <img style="width: 100%; height: 100%;" src="/landing_resources/img/preloader/glass.png" alt="">
+            <img class="waves wave1" src="/landing_resources/img/preloader/water2.png" alt="">
+            <img class="waves wave2" src="/landing_resources/img/preloader/water2.png" alt="">
 
-						<span data-text-preloader="G" class="letters-loading">
-							G
-						</span>
-
-						<span data-text-preloader="V" class="letters-loading">
-							V
-						</span>
-
-						<span data-text-preloader="O" class="letters-loading">
-							O
-						</span>
-
-						<span data-text-preloader="D" class="letters-loading">
-							D
-						</span>
-
-						<span data-text-preloader="K" class="letters-loading">
-							K
-						</span>
-
-						<span data-text-preloader="A" class="letters-loading">
-							A
-						</span>
-					</div>
-				</div>
-				<div class="loader-section section-left"></div>
-				<div class="loader-section section-right"></div>
-			</div>
+        </div>
+      </div>
+      <div id="loaderCount">99%</div>
 		</div> -->
 	</section>
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080">
@@ -886,5 +859,6 @@
       </button>
     </div>
     <script src="{{secure_asset('landing_resources/homePage/main.js')}}"></script>
+    <script src="/landing_resources/homePage/main.js"></script>
   </body>
 </html>

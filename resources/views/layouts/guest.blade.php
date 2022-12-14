@@ -32,9 +32,6 @@
 
 <body>
 
-<div id="preloader">
-    <div class="pulse"></div>
-</div><!-- Pulse Preloader -->
 
 <!-- Header================================================== -->
 <header>

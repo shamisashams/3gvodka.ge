@@ -4,6 +4,7 @@ const navigations = document.getElementById("navigations");
 const closeNav = document.getElementById("close_nav");
 const playMusic = document.getElementById("play_music");
 const pauseMusic = document.getElementById("pause_music");
+const loaderCount = document.getElementById("loaderCount");
 const audio = document.querySelector("audio");
 
 // main page
@@ -37,3 +38,12 @@ window.addEventListener("load", function () {
 
     // }, 3000);
 });
+
+let count = 0;
+
+setInterval(() => {
+    if (count < 100) {
+        count += 1;
+        loaderCount.innerText = count + "%";
+    }
+}, 50);
