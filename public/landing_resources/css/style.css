@@ -1164,7 +1164,7 @@ img {
 @media screen and (max-width: 1500px) {
     .product_page .grid {
         -ms-grid-columns: 1fr 16px 1fr 16px 1fr 16px 1fr 16px 1fr;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 @media screen and (max-width: 1300px) {
